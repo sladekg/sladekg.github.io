@@ -1,4 +1,10 @@
 # sladekg.github.io
-code for my personal website
 
-I am learning to code on my own. I am a User Experience Strategist and am now taking the opportunity to learn how to code.
+Personal portfolio site for Gabrielle Sladek, a UX designer, researcher, strategist, and product designer.
+
+## Structure
+
+- `index.html` contains the one-page portfolio content and accessible navigation.
+- `styles.css` contains the responsive visual system, layout, and component styles.
+
+The site is intentionally dependency-free and can be previewed by opening `index.html` directly in a browser or serving the folder with any static web server.
