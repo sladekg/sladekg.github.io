@@ -56,6 +56,8 @@ h1 em, h2 em, h3 em { color: var(--coral); font-style: normal; }
 .section-heading { margin-bottom: 3.5rem; }
 .section-heading h2 { font-size: clamp(3rem, 6vw, 5.5rem); margin-bottom: 0; }
 .project-card { display: grid; grid-template-columns: 1.08fr .92fr; background: var(--blue); }
+.project-card-link { color: inherit; cursor: pointer; }
+.project-card-link:focus-visible { outline-offset: 6px; }
 .project-image { min-height: 470px; position: relative; display: flex; align-items: center; justify-content: center; overflow: hidden; padding: 2rem; }
 .project-image img { width: 82%; max-height: 380px; object-fit: contain; filter: drop-shadow(0 20px 15px rgba(23,42,40,.15)); }
 .project-sticker { position: absolute; top: 26px; left: 26px; width: 92px; height: 92px; display: grid; place-content: center; border-radius: 50%; background: var(--yellow); text-align: center; font-size: .68rem; font-weight: 700; transform: rotate(-12deg); }
@@ -70,6 +72,31 @@ h1 em, h2 em, h3 em { color: var(--coral); font-style: normal; }
 .work-note p { margin: 0; font-size: .85rem; }
 .line { width: 48px; height: 1px; background: var(--ink); }
 .arrow-link { margin-left: auto; }
+.projects-library { margin-top: 8rem; }
+.library-heading { display: flex; align-items: end; justify-content: space-between; gap: 2rem; margin-bottom: 2.5rem; }
+.library-heading h2 { margin: 0; font-size: clamp(3.2rem, 6vw, 5.5rem); }
+.library-intro { max-width: 285px; margin: 0 0 .4rem; font-size: .9rem; }
+.filter-bar { display: flex; align-items: center; gap: 1rem; padding: 1rem 0; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+.filter-label { text-transform: uppercase; letter-spacing: .12em; font-size: .65rem; font-weight: 700; }
+.filter-options { display: flex; flex-wrap: wrap; gap: .5rem; }
+.filter-button, .clear-filters { border: 1px solid var(--ink); border-radius: 99px; padding: .5rem .8rem; color: var(--ink); background: transparent; font: 600 .7rem "DM Sans", sans-serif; cursor: pointer; }
+.filter-button:hover, .filter-button.is-active { background: var(--ink); color: var(--paper); }
+.clear-filters { margin-left: auto; border-color: transparent; text-decoration: underline; text-underline-offset: 3px; }
+.filter-status { margin: 1.2rem 0; font-size: .75rem; font-weight: 600; }
+.project-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2.5rem 1.5rem; }
+.project-tile { display: block; }
+.project-tile:focus-visible { outline-offset: 6px; }
+.tile-image { display: flex; align-items: center; justify-content: center; height: 205px; margin-bottom: 1rem; overflow: hidden; }
+.tile-image img { width: 100%; height: 100%; object-fit: cover; transition: transform .25s ease; }
+.project-tile:hover .tile-image img { transform: scale(1.04); }
+.tile-discovery { background: #e3b1d0; }
+.tile-roscoe { background: #b8d8e7; }
+.tile-console { background: #252341; }
+.tile-soap { background: #f1c7c5; }
+.tile-poster { background: #d4e5a0; }
+.tile-meta { display: flex; justify-content: space-between; margin-bottom: .55rem; text-transform: uppercase; letter-spacing: .08em; font-size: .62rem; font-weight: 700; }
+.project-tile h3 { margin-bottom: .55rem; font-size: 1.35rem; letter-spacing: -.04em; }
+.project-tile p { max-width: 300px; margin: 0; font-size: .82rem; }
 .approach { padding: 120px 0; background: var(--ink); color: var(--paper); }
 .approach-heading { display: grid; grid-template-columns: 1fr 1fr 1fr; align-items: end; margin-bottom: 5.5rem; }
 .approach-heading h2 { grid-column: 1 / 3; margin: 0; font-size: clamp(3.5rem, 7vw, 6.5rem); }
@@ -120,6 +147,13 @@ h1 em, h2 em, h3 em { color: var(--coral); font-style: normal; }
     .work-note { align-items: flex-start; flex-wrap: wrap; gap: 1rem; }
     .arrow-link { margin-left: 66px; }
     .about { gap: 4rem; padding-top: 90px; padding-bottom: 95px; }
+    .projects-library { margin-top: 5rem; }
+    .library-heading { display: block; }
+    .library-intro { margin-top: 1.2rem; }
+    .filter-bar { display: block; }
+    .filter-label { display: block; margin-bottom: .8rem; }
+    .clear-filters { margin: 1rem 0 0; padding-left: 0; }
+    .project-grid { grid-template-columns: 1fr; gap: 2.8rem; }
     .portrait-caption { right: -8px; }
     .site-footer { flex-wrap: wrap; padding: 1.5rem 0; }
 }
