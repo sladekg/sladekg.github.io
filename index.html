@@ -11,8 +11,9 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <a class="skip-link" href="#main-content">Skip to main content</a>
     <header class="site-header">
-        <a class="logo" href="#top" aria-label="Gabrielle Sladek home">GS<span>.</span></a>
+        <a class="logo" href="#main-content" aria-label="Gabrielle Sladek home">GS<span aria-hidden="true">.</span></a>
         <nav class="nav" aria-label="Main navigation">
             <a href="#work">Work</a>
             <a href="#approach">Approach</a>
@@ -21,7 +22,7 @@
         </nav>
     </header>
 
-    <main id="top">
+    <main id="main-content">
         <section class="hero page-wrap">
             <div class="hero-copy">
                 <p class="eyebrow"><span class="eyebrow-dot"></span> UX designer · researcher · strategist</p>
@@ -29,7 +30,7 @@
                 <p class="hero-intro">I turn curious questions into useful, human-centered products and experiences—with accessibility and sustainability built in from the start.</p>
                 <a class="button button-dark" href="#work">Explore selected work <span aria-hidden="true">↓</span></a>
             </div>
-            <div class="hero-art" aria-label="Abstract illustration">
+            <div class="hero-art" aria-hidden="true">
                 <div class="sun"></div>
                 <div class="orbit orbit-one"></div>
                 <div class="orbit orbit-two"></div>
@@ -41,7 +42,8 @@
         </section>
 
         <section class="marquee" aria-label="Areas of practice">
-            <div class="marquee-track">
+            <p class="sr-only">Research, strategy, product design, and inclusive systems</p>
+            <div class="marquee-track" aria-hidden="true">
                 <span>Research</span><b>✳</b><span>Strategy</span><b>✳</b><span>Product design</span><b>✳</b><span>Inclusive systems</span><b>✳</b><span>Research</span><b>✳</b><span>Strategy</span>
             </div>
         </section>
@@ -79,13 +81,13 @@
                     <p class="section-lede">The best solutions come from slowing down long enough to understand what’s really going on.</p>
                 </div>
                 <div class="principles">
-                    <article><span class="principle-number">01</span><h3>Stay curious</h3><p>I ask the questions that uncover the real problem—not just the loudest one.</p></article>
-                    <article><span class="principle-number">02</span><h3>Make room</h3><p>Co-creation and universal design help more people see themselves in the outcome.</p></article>
-                    <article><span class="principle-number">03</span><h3>Think in systems</h3><p>I look beyond the screen to design experiences that are useful, responsible, and lasting.</p></article>
+                    <article>                    <span class="principle-number" aria-hidden="true">01</span><h3>Stay curious</h3><p>I ask the questions that uncover the real problem—not just the loudest one.</p></article>
+                    <article><span class="principle-number" aria-hidden="true">02</span><h3>Make room</h3><p>Co-creation and universal design help more people see themselves in the outcome.</p></article>
+                    <article><span class="principle-number" aria-hidden="true">03</span><h3>Think in systems</h3><p>I look beyond the screen to design experiences that are useful, responsible, and lasting.</p></article>
                 </div>
                 <div class="process">
                     <span class="process-label">My process</span>
-                    <div class="process-steps"><span>Empathize</span><i>→</i><span>Define</span><i>→</i><span>Ideate</span><i>→</i><span>Prototype</span><i>→</i><span>Test</span></div>
+                    <div class="process-steps"><span>Empathize</span><i aria-hidden="true">→</i><span>Define</span><i aria-hidden="true">→</i><span>Ideate</span><i aria-hidden="true">→</i><span>Prototype</span><i aria-hidden="true">→</i><span>Test</span></div>
                 </div>
             </div>
         </section>
@@ -115,7 +117,7 @@
     <footer class="site-footer page-wrap">
         <span>© 2026 Gabrielle Sladek</span>
         <span>Designed with curiosity + care</span>
-        <a href="#top">Back to top ↑</a>
+        <a href="#main-content">Back to top <span aria-hidden="true">↑</span></a>
     </footer>
 </body>
 </html>
