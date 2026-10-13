@@ -48,7 +48,7 @@ export default function Home() {
       setError(null);
 
       try {
-        const response = await fetch("/api/content", {
+        const response = await fetch("/content.json", {
           cache: "no-store",
           signal: controller.signal,
         });
@@ -119,28 +119,26 @@ export default function Home() {
         </a>
       </section>
 
-      <nav className="folder-nav" aria-label="Case study categories">
+      <nav className="folder-nav" aria-label="Main navigation">
         <div className="folder-nav-inner">
-          <a className="nav-name" href="#top">
-            Gabrielle <span>Sladek</span>
-          </a>
-          <div className="folder-tabs" role="group" aria-label="Choose a category">
-            {categories.map((category) => (
-              <button
-                className={`folder-tab${activeCategory === category.id ? " is-active" : ""}`}
-                key={category.id}
-                type="button"
-                aria-pressed={activeCategory === category.id}
-                onClick={() => setActiveCategory(category.id)}
-              >
-                <span className="folder-number">{category.number}</span>
-                <span>{category.label}</span>
-              </button>
-            ))}
-          </div>
-          <a className="nav-back-top" href="#top" aria-label="Back to top">
-            ↑ <span>Top</span>
-          </a>
+          <button
+            className="nav-button"
+            type="button"
+            onClick={() =>
+              document.getElementById("work")?.scrollIntoView({
+                behavior: "smooth",
+                block: "start",
+              })
+            }
+          >
+            Case studies
+          </button>
+          <button className="nav-button" type="button">
+            About me
+          </button>
+          <button className="nav-button" type="button">
+            Contact
+          </button>
         </div>
       </nav>
 
@@ -159,9 +157,19 @@ export default function Home() {
         </div>
 
         <div className="active-folder" key={activeCategory} aria-live="polite">
-          <div className="active-folder-tab">
-            <span className="folder-number">{selectedCategory?.number}</span>
-            {selectedCategory?.label}
+          <div className="folder-tabs" role="group" aria-label="Choose a category">
+            {categories.map((category) => (
+              <button
+                className={`folder-tab${activeCategory === category.id ? " is-active" : ""}`}
+                key={category.id}
+                type="button"
+                aria-pressed={activeCategory === category.id}
+                onClick={() => setActiveCategory(category.id)}
+              >
+                <span className="folder-number">{category.number}</span>
+                <span>{category.label}</span>
+              </button>
+            ))}
           </div>
           <div className="active-folder-content">
             {loading ? (
