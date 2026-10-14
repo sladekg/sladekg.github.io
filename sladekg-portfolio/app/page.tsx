@@ -39,6 +39,7 @@ export default function Home() {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
   const [retryCount, setRetryCount] = useState(0);
+  const [isHeroScrolled, setIsHeroScrolled] = useState(false);
 
   useEffect(() => {
     const controller = new AbortController();
@@ -81,6 +82,21 @@ export default function Home() {
     return () => controller.abort();
   }, [retryCount]);
 
+  useEffect(() => {
+    const updateHeroState = () => {
+      setIsHeroScrolled(window.scrollY > 80);
+    };
+
+    updateHeroState();
+    window.addEventListener("scroll", updateHeroState, { passive: true });
+    window.addEventListener("resize", updateHeroState);
+
+    return () => {
+      window.removeEventListener("scroll", updateHeroState);
+      window.removeEventListener("resize", updateHeroState);
+    };
+  }, []);
+
   const selectedCategory = categories.find(
     (category) => category.id === activeCategory,
   );
@@ -92,68 +108,67 @@ export default function Home() {
 
   return (
     <main>
-      <section className="hero" id="top" aria-labelledby="hero-title">
-        <div className="hero-meta">
-          <a className="wordmark" href="#top" aria-label="Gabrielle Sladek, home">
-            GMS<span>.</span>
-          </a>
-          <span className="hero-location">Milwaukee, WI · Working everywhere</span>
-        </div>
-
-        <div className="hero-intro">
-          <h1 id="hero-title" className="hero-name">
-            Gabrielle Sladek
-          </h1>
-          <div className="hero-roles" aria-label="Product designer and strategist">
-            <span>Product Designer</span>
-            <span className="role-ampersand" aria-hidden="true">
-              &
-            </span>
-            <span className="role-script">Strategist</span>
-          </div>
-        </div>
-
-        <a className="scroll-cue" href="#work">
-          <span>Scroll to explore</span>
-          <span className="scroll-cue-line" aria-hidden="true" />
+      <div className="hero-meta">
+        <a
+          className="wordmark"
+          href="#top"
+          aria-label="Gabrielle Sladek, home"
+        >
+          GMS<span>.</span>
         </a>
-      </section>
+        <span className="hero-location">Milwaukee, WI · Working everywhere</span>
+      </div>
+
+      <div className={`landing-shell${isHeroScrolled ? " is-scrolled" : ""}`}>
+        <section className="hero" id="top" aria-labelledby="hero-title">
+          <div className="hero-intro">
+            <h1 id="hero-title" className="hero-name">
+              Gabrielle Sladek
+            </h1>
+            <div className="hero-roles" aria-label="Product designer and strategist">
+              <span>Product Designer</span>
+              <span className="role-ampersand" aria-hidden="true">
+                &
+              </span>
+              <span className="role-script">Strategist</span>
+            </div>
+          </div>
+        </section>
+      </div>
 
       <nav className="folder-nav" aria-label="Main navigation">
         <div className="folder-nav-inner">
-          <button
-            className="nav-button"
-            type="button"
-            onClick={() =>
-              document.getElementById("work")?.scrollIntoView({
-                behavior: "smooth",
-                block: "start",
-              })
-            }
-          >
-            Case studies
-          </button>
-          <button className="nav-button" type="button">
-            About me
-          </button>
-          <button className="nav-button" type="button">
-            Contact
-          </button>
+          <div className="nav-actions">
+            <button
+              className="nav-button"
+              type="button"
+              onClick={() =>
+                document.getElementById("work")?.scrollIntoView({
+                  behavior: "smooth",
+                  block: "start",
+                })
+              }
+            >
+              Case studies
+            </button>
+            <button className="nav-button" type="button">
+              About me
+            </button>
+            <button className="nav-button" type="button">
+              Contact
+            </button>
+          </div>
         </div>
       </nav>
 
-      <section className="work-section" id="work" aria-labelledby="work-title">
+      <section className="work-section" aria-labelledby="work-title">
         <div className="section-heading">
           <div>
-            <p className="section-kicker">A collection of good questions</p>
+            <p className="section-kicker" id="work">My Work</p>
             <h2 id="work-title">
-              The work<span className="heading-period">.</span>
+              Take a peek in my brain<span className="heading-period">.</span>
             </h2>
           </div>
-          <p className="section-aside">
-            A few ways I turn tangled challenges into thoughtful, useful
-            experiences.
-          </p>
         </div>
 
         <div className="active-folder" key={activeCategory} aria-live="polite">
@@ -182,7 +197,7 @@ export default function Home() {
                   type="button"
                   onClick={() => setRetryCount((count) => count + 1)}
                 >
-                  Try again <span aria-hidden="true">↗</span>
+                  Try again
                 </button>
               </div>
             ) : caseStudies.length === 0 ? (
@@ -212,7 +227,7 @@ export default function Home() {
         </a>
         <p>Good work happens when we make it together.</p>
         <a className="footer-top" href="#top">
-          Back to the beginning ↑
+          Back to the beginning
         </a>
       </footer>
     </main>

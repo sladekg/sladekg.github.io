@@ -31,9 +31,7 @@ export default function CaseStudyCard({
         <span className="art-label">
           {project.title.slice(0, 2).toUpperCase()}
         </span>
-        <span className="art-caption">
-          A case study <span>↗</span>
-        </span>
+        <span className="art-caption">A case study</span>
       </div>
       <div className="card-copy">
         <div className="card-meta">
@@ -63,7 +61,7 @@ export default function CaseStudyCard({
             target="_blank"
             rel="noreferrer"
           >
-            View presentation <span aria-hidden="true">↗</span>
+            View presentation
           </a>
         )}
       </div>

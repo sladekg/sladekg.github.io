@@ -44,17 +44,20 @@ a:focus-visible {
   outline-offset: 4px;
 }
 
+.landing-shell {
+  position: relative;
+  background: #fff;
+}
+
 .hero {
   position: relative;
   display: flex;
-  min-height: calc(100svh - 78px);
+  min-height: calc(100svh - 156px);
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: flex-start;
   overflow: hidden;
-  padding: 28px 7.3vw 30px;
-  background:
-    radial-gradient(ellipse at 51% 52%, rgb(232 231 217 / 55%), transparent 43%),
-    var(--paper);
+  padding: 0 7.3vw 30px;
+  background: #fff;
 }
 
 .hero::before,
@@ -78,10 +81,15 @@ a:focus-visible {
 }
 
 .hero-meta {
-  z-index: 1;
+  position: sticky;
+  top: 0;
+  z-index: 20;
   display: flex;
+  min-height: 78px;
   align-items: center;
   justify-content: space-between;
+  padding: 16px 7.3vw;
+  background: #fff;
   color: var(--muted);
   font-size: 10px;
   font-weight: 600;
@@ -105,8 +113,17 @@ a:focus-visible {
 .hero-intro {
   position: relative;
   z-index: 1;
-  margin-top: -1.5vh;
+  margin: 10vh auto 0;
   text-align: center;
+  transition:
+    opacity 380ms ease,
+    transform 380ms ease;
+}
+
+.landing-shell.is-scrolled .hero-intro {
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(-18px);
 }
 
 .hero-overline,
@@ -163,34 +180,14 @@ a:focus-visible {
   line-height: 1.8;
 }
 
-.scroll-cue {
-  z-index: 1;
-  display: flex;
-  width: fit-content;
-  flex-direction: column;
-  align-items: center;
-  gap: 10px;
-  align-self: center;
-  color: var(--muted);
-  font-size: 9px;
-  letter-spacing: 0.13em;
-  text-transform: uppercase;
-}
-
-.scroll-cue-line {
-  width: 1px;
-  height: 28px;
-  background: #aab09c;
-}
-
 .folder-nav {
   position: sticky;
-  z-index: 10;
+  z-index: 30;
   top: 0;
   min-height: 78px;
-  border-block: 1px solid var(--line);
-  background: rgb(246 244 238 / 95%);
-  backdrop-filter: blur(14px);
+  margin-top: -78px;
+  border-bottom: 1px solid var(--line);
+  background: transparent;
 }
 
 .folder-nav-inner {
@@ -199,8 +196,14 @@ a:focus-visible {
   min-height: 78px;
   align-items: center;
   justify-content: center;
-  gap: 12px;
   margin-inline: auto;
+}
+
+.nav-actions {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
 }
 
 .nav-button {
@@ -298,14 +301,6 @@ a:focus-visible {
 
 .heading-period {
   color: #899178;
-}
-
-.section-aside {
-  max-width: 275px;
-  margin: 0 0 3px;
-  color: var(--muted);
-  font-size: 12px;
-  line-height: 1.8;
 }
 
 .active-folder {
@@ -579,8 +574,13 @@ a:focus-visible {
 
 @media (max-width: 760px) {
   .hero {
-    min-height: calc(100svh - 70px);
-    padding: 21px 6vw 22px;
+    min-height: calc(100svh - 140px);
+    padding: 0 6vw 22px;
+  }
+
+  .hero-meta {
+    min-height: 70px;
+    padding: 14px 6vw;
   }
 
   .hero-meta {
@@ -595,6 +595,10 @@ a:focus-visible {
     font-size: clamp(53px, 12vw, 86px);
   }
 
+  .hero-intro {
+    margin-top: 8vh;
+  }
+
   .hero::before {
     left: 8%;
   }
@@ -605,19 +609,26 @@ a:focus-visible {
 
   .folder-nav {
     min-height: 70px;
+    margin-top: -70px;
   }
 
   .folder-nav-inner {
+    display: flex;
     width: 100%;
     min-height: 70px;
     justify-content: center;
-    gap: 4px;
     padding-inline: 10px;
   }
 
+  .nav-actions {
+    width: 100%;
+    justify-content: center;
+    gap: 3px;
+  }
+
   .nav-button {
-    padding: 9px 12px;
-    font-size: 10px;
+    padding: 8px clamp(6px, 2vw, 10px);
+    font-size: clamp(8px, 2.35vw, 10px);
   }
 
   .folder-tabs {
@@ -648,11 +659,6 @@ a:focus-visible {
     flex-direction: column;
     gap: 17px;
     margin-bottom: 35px;
-  }
-
-  .section-aside {
-    max-width: 310px;
-    margin: 0;
   }
 
   .active-folder-content {
