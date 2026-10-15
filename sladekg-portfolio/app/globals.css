@@ -39,7 +39,9 @@ a {
 }
 
 button:focus-visible,
-a:focus-visible {
+a:focus-visible,
+input:focus-visible,
+textarea:focus-visible {
   outline: 2px solid #687d5b;
   outline-offset: 4px;
 }
@@ -548,6 +550,376 @@ a:focus-visible {
   flex-shrink: 0;
 }
 
+.about-section {
+  padding: 96px 7.3vw 110px;
+  background: #fff;
+}
+
+.about-layout {
+  display: grid;
+  width: min(1100px, 100%);
+  grid-template-columns: minmax(0, 1.2fr) minmax(280px, 0.8fr);
+  align-items: center;
+  gap: clamp(40px, 8vw, 110px);
+  margin-inline: auto;
+}
+
+.about-copy h2 {
+  max-width: 650px;
+  margin: 10px 0 20px;
+  font-family: var(--serif);
+  font-size: clamp(46px, 6vw, 76px);
+  font-weight: 400;
+  letter-spacing: -0.065em;
+  line-height: 0.98;
+}
+
+.about-intro,
+.about-detail {
+  max-width: 610px;
+  color: #65675d;
+  font-size: 13px;
+  line-height: 1.9;
+}
+
+.about-intro {
+  margin: 0;
+}
+
+.about-detail {
+  margin: 14px 0 0;
+}
+
+.about-contact-link {
+  display: inline-block;
+  margin-top: 24px;
+  padding-bottom: 5px;
+  border-bottom: 1px solid #899178;
+  color: var(--green);
+  font-size: 11px;
+  font-weight: 600;
+}
+
+.about-card {
+  position: relative;
+  min-height: 360px;
+  overflow: hidden;
+  padding: 32px clamp(26px, 4vw, 42px);
+  border-radius: 8px;
+  background:
+    radial-gradient(ellipse at 100% 0%, rgb(255 255 255 / 10%) 0 32%, transparent 32.5%),
+    var(--green);
+  color: #fff;
+}
+
+.about-card-mark {
+  display: inline-block;
+  color: rgb(255 255 255 / 88%);
+  font-family: var(--serif);
+  font-size: 42px;
+  letter-spacing: -0.1em;
+}
+
+.about-card-mark span {
+  color: #c5cfac;
+}
+
+.about-card-kicker {
+  margin: 28px 0 13px;
+  color: #d8decd;
+  font-size: 9px;
+  font-weight: 600;
+  letter-spacing: 0.13em;
+  text-transform: uppercase;
+}
+
+.about-focus-list {
+  display: grid;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.about-focus-list li {
+  padding: 10px 0;
+  border-bottom: 1px solid rgb(255 255 255 / 22%);
+  font-family: var(--serif);
+  font-size: 20px;
+  letter-spacing: -0.02em;
+}
+
+.about-card-location {
+  margin: 22px 0 0;
+  color: #d8decd;
+  font-size: 9px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.contact-section {
+  padding: 96px 7.3vw 110px;
+  background: #eeede5;
+}
+
+.contact-heading,
+.contact-grid {
+  width: min(1100px, 100%);
+  margin-inline: auto;
+}
+
+.contact-heading {
+  margin-bottom: 42px;
+}
+
+.contact-heading h2 {
+  max-width: 720px;
+  margin: 10px 0 12px;
+  font-family: var(--serif);
+  font-size: clamp(44px, 6vw, 72px);
+  font-weight: 400;
+  letter-spacing: -0.065em;
+  line-height: 1;
+}
+
+.contact-intro,
+.contact-panel-copy,
+.resume-note {
+  color: var(--muted);
+  font-size: 12px;
+  line-height: 1.8;
+}
+
+.contact-intro {
+  max-width: 470px;
+  margin: 0;
+}
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 24px;
+}
+
+.contact-form-panel,
+.resume-panel {
+  min-width: 0;
+  padding: clamp(24px, 4vw, 42px);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--paper);
+}
+
+.contact-form-panel h3,
+.resume-panel-heading h3 {
+  margin: 0;
+  font-family: var(--serif);
+  font-size: 30px;
+  font-weight: 400;
+  letter-spacing: -0.04em;
+}
+
+.contact-panel-copy {
+  margin: 8px 0 24px;
+}
+
+.contact-form {
+  display: grid;
+  gap: 9px;
+}
+
+.contact-form label {
+  margin-top: 8px;
+  color: var(--green);
+  font-size: 9px;
+  font-weight: 650;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  border: 1px solid var(--line);
+  border-radius: 4px;
+  background: #fff;
+  color: var(--ink);
+  font: 12px/1.6 var(--sans);
+}
+
+.contact-form input {
+  min-height: 43px;
+  padding: 10px 12px;
+}
+
+.contact-form textarea {
+  min-height: 130px;
+  padding: 11px 12px;
+  resize: vertical;
+}
+
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+  color: #999a90;
+}
+
+.contact-submit {
+  display: inline-flex;
+  min-height: 44px;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 12px;
+  padding: 11px 18px;
+  border: 1px solid var(--green);
+  border-radius: 999px;
+  background: var(--green);
+  color: #fff;
+  cursor: pointer;
+  font-size: 11px;
+  font-weight: 600;
+  transition:
+    background 180ms ease,
+    color 180ms ease;
+}
+
+.contact-submit:hover {
+  background: transparent;
+  color: var(--green);
+}
+
+.contact-email {
+  display: inline-block;
+  margin-top: 20px;
+  color: var(--green);
+  font-size: 11px;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.resume-panel {
+  display: flex;
+  flex-direction: column;
+}
+
+.resume-panel-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.resume-panel-heading .section-kicker {
+  margin-bottom: 7px;
+}
+
+.resume-format {
+  padding: 6px 9px;
+  border: 1px solid #c7cabe;
+  border-radius: 999px;
+  color: var(--green);
+  font-size: 9px;
+  font-weight: 650;
+  letter-spacing: 0.1em;
+}
+
+.resume-preview {
+  position: relative;
+  display: grid;
+  min-height: 276px;
+  overflow: hidden;
+  place-items: center;
+  border: 1px solid #e2e0d5;
+  border-radius: 5px;
+  background:
+    radial-gradient(ellipse at 50% 55%, #e2e2d7 0 28%, transparent 28.5%),
+    #e9e8df;
+}
+
+.resume-paper {
+  display: flex;
+  width: 48%;
+  min-width: 170px;
+  min-height: 220px;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 22px 20px;
+  box-shadow: 0 8px 22px rgb(38 40 31 / 12%);
+  background: #fffefa;
+  transform: rotate(-2deg);
+}
+
+.resume-paper-name {
+  font-family: var(--serif);
+  font-size: 16px;
+  letter-spacing: -0.04em;
+}
+
+.resume-paper-role {
+  margin-top: 4px;
+  color: var(--muted);
+  font-size: 6px;
+}
+
+.resume-paper-rule {
+  width: 100%;
+  height: 1px;
+  margin: 11px 0;
+  background: var(--line);
+}
+
+.resume-paper-label {
+  margin: 6px 0;
+  color: var(--green);
+  font-size: 6px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+}
+
+.resume-paper-lines {
+  width: 100%;
+  height: 17px;
+  background: repeating-linear-gradient(
+    to bottom,
+    #deded3 0 1px,
+    transparent 1px 5px
+  );
+}
+
+.resume-paper-lines-short {
+  width: 72%;
+}
+
+.resume-placeholder-label {
+  position: absolute;
+  right: 12px;
+  bottom: 12px;
+  padding: 7px 9px;
+  border: 1px solid rgb(222 222 211 / 90%);
+  border-radius: 3px;
+  background: rgb(246 244 238 / 92%);
+  color: var(--muted);
+  font-size: 8px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.resume-note {
+  margin: 16px 0;
+}
+
+.resume-button {
+  align-self: flex-start;
+  min-height: 42px;
+  padding: 10px 15px;
+  border: 1px solid #c9c9bd;
+  border-radius: 999px;
+  background: transparent;
+  color: #888a7f;
+  cursor: not-allowed;
+  font-size: 10px;
+}
+
 @keyframes folder-arrive {
   from {
     opacity: 0.5;
@@ -652,6 +1024,42 @@ a:focus-visible {
 
   .work-section {
     padding: 70px 6vw 85px;
+  }
+
+  .about-section {
+    padding: 70px 6vw 80px;
+  }
+
+  .about-layout {
+    grid-template-columns: 1fr;
+    gap: 34px;
+  }
+
+  .about-card {
+    min-height: 330px;
+    padding: 28px;
+  }
+
+  .contact-section {
+    padding: 70px 6vw 80px;
+  }
+
+  .contact-heading {
+    margin-bottom: 30px;
+  }
+
+  .contact-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .contact-form-panel,
+  .resume-panel {
+    padding: 24px;
+  }
+
+  .resume-paper {
+    width: 45%;
   }
 
   .section-heading {
