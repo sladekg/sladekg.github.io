@@ -2,6 +2,7 @@
 
 import { useEffect, useState, type FormEvent } from "react";
 import CaseStudyCard from "./components/case-study-card";
+import type { Project } from "./lib/portfolio";
 
 const contactEmail = "gabriellemsladek@gmail.com";
 
@@ -13,23 +14,6 @@ const categories = [
 ] as const;
 
 type CategoryId = (typeof categories)[number]["id"];
-
-type CaseStudy = {
-  summary: string;
-  context: string;
-  my_role: string;
-  action: string;
-  result: string;
-};
-
-type Project = {
-  title: string;
-  topics: string[];
-  awards: number;
-  case_study: CaseStudy;
-  images: { src: string; alt: string }[];
-  presentation: string;
-};
 
 type PortfolioContent = {
   projects: Project[];
@@ -43,6 +27,9 @@ export default function Home() {
   const [error, setError] = useState<string | null>(null);
   const [retryCount, setRetryCount] = useState(0);
   const [isHeroScrolled, setIsHeroScrolled] = useState(false);
+  const filteredProjects = projects.filter((project) =>
+    project.topics.includes(activeCategory),
+  );
 
   useEffect(() => {
     const controller = new AbortController();
@@ -99,13 +86,6 @@ export default function Home() {
       window.removeEventListener("resize", updateHeroState);
     };
   }, []);
-
-  const selectedCategory = categories.find(
-    (category) => category.id === activeCategory,
-  );
-  const caseStudies = projects
-    .filter((project) => project.topics.includes(activeCategory))
-    .map((project) => ({ project, caseStudy: project.case_study }));
 
   function handleContactSubmit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
@@ -196,59 +176,63 @@ export default function Home() {
       <section className="work-section" aria-labelledby="work-title">
         <div className="section-heading">
           <div>
-            <p className="section-kicker" id="work">My Work</p>
+            <p className="section-kicker" id="work">Selected work</p>
             <h2 id="work-title">
-              Take a peek in my brain<span className="heading-period">.</span>
+              A few things I&apos;ve made<span className="heading-period">.</span>
             </h2>
+            <p className="work-intro">
+              Product design, strategy, research, and the details that bring
+              each project together.
+            </p>
           </div>
         </div>
 
-        <div className="active-folder" key={activeCategory} aria-live="polite">
-          <div className="folder-tabs" role="group" aria-label="Choose a category">
-            {categories.map((category) => (
-              <button
-                className={`folder-tab${activeCategory === category.id ? " is-active" : ""}`}
-                key={category.id}
-                type="button"
-                aria-pressed={activeCategory === category.id}
-                onClick={() => setActiveCategory(category.id)}
-              >
-                <span className="folder-number">{category.number}</span>
-                <span>{category.label}</span>
-              </button>
-            ))}
-          </div>
-          <div className="active-folder-content">
-            {loading ? (
-              <p className="status-message">Gathering the good stuff…</p>
-            ) : error ? (
-              <div className="status-message status-error" role="alert">
-                <p>{error}</p>
+        <div className="project-index">
+          <div className="active-folder" key={activeCategory} aria-live="polite">
+            <div className="folder-tabs" role="group" aria-label="Filter projects by discipline">
+              {categories.map((category) => (
                 <button
-                  className="retry-button"
+                  className={`folder-tab${activeCategory === category.id ? " is-active" : ""}`}
+                  key={category.id}
                   type="button"
-                  onClick={() => setRetryCount((count) => count + 1)}
+                  aria-pressed={activeCategory === category.id}
+                  onClick={() => setActiveCategory(category.id)}
                 >
-                  Try again
+                  <span className="folder-number">{category.number}</span>
+                  <span>{category.label}</span>
                 </button>
-              </div>
-            ) : caseStudies.length === 0 ? (
-              <p className="status-message">
-                New stories are in the works. Check back soon.
-              </p>
-            ) : (
-              <div className="case-study-grid">
-                {caseStudies.map(({ project, caseStudy }, index) => (
-                  <CaseStudyCard
-                    key={project.title}
-                    project={project}
-                    caseStudy={caseStudy}
-                    categoryLabel={selectedCategory?.label ?? activeCategory}
-                    index={index}
-                  />
-                ))}
-              </div>
-            )}
+              ))}
+            </div>
+            <div className="active-folder-content">
+              {loading ? (
+                <p className="status-message">Gathering the good stuff…</p>
+              ) : error ? (
+                <div className="status-message status-error" role="alert">
+                  <p>{error}</p>
+                  <button
+                    className="retry-button"
+                    type="button"
+                    onClick={() => setRetryCount((count) => count + 1)}
+                  >
+                    Try again
+                  </button>
+                </div>
+              ) : filteredProjects.length === 0 ? (
+                <p className="status-message">
+                  New stories are in the works. Check back soon.
+                </p>
+              ) : (
+                <div className="case-study-grid">
+                  {filteredProjects.map((project, index) => (
+                    <CaseStudyCard
+                      key={project.title}
+                      project={project}
+                      index={index}
+                    />
+                  ))}
+                </div>
+              )}
+            </div>
           </div>
         </div>
       </section>
