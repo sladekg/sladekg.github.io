@@ -31,7 +31,6 @@ export default function CaseStudyCard({
       </div>
       <div className="card-copy">
         <div className="card-meta">
-          <span className="card-category">Selected work</span>
           <span className="card-count">{String(index + 1).padStart(2, "0")}</span>
         </div>
         <h3>{project.title}</h3>
@@ -41,7 +40,7 @@ export default function CaseStudyCard({
           ))}
         </div>
         <p className="card-context">{project.case_study.summary}</p>
-        <span className="project-card-link">Read project story <span aria-hidden="true">↗</span></span>
+        <span className="project-card-link">Read project story</span>
       </div>
     </Link>
   );

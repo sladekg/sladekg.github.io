@@ -126,9 +126,10 @@ textarea:focus-visible {
 
 .hero-name {
   margin: 9px 0 1px;
-  font-family: var(--serif);
+  font-family: var(--font-dm-serif-display), serif;
   font-size: clamp(64px, 11vw, 148px);
   font-weight: 400;
+  font-style: normal;
   letter-spacing: -0.085em;
   line-height: 0.91;
 }
@@ -206,6 +207,35 @@ textarea:focus-visible {
   background: transparent;
 }
 
+.project-page .hero-meta {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr);
+  gap: 24px;
+}
+
+.project-main-nav {
+  justify-self: center;
+}
+
+.project-main-nav .nav-actions {
+  gap: 12px;
+}
+
+.project-main-nav .nav-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--ink);
+  font-size: 11px;
+  font-weight: 550;
+  text-align: center;
+  text-transform: none;
+}
+
+.project-page .hero-location {
+  justify-self: end;
+}
+
 .folder-nav-inner {
   display: flex;
   width: min(1180px, 85.4vw);
@@ -235,12 +265,34 @@ textarea:focus-visible {
   transition:
     border-color 180ms ease,
     background 180ms ease,
-    color 180ms ease;
+    color 180ms ease,
+    transform 180ms ease;
 }
 
-.nav-button:hover {
-  border-color: #b96f55;
-  background: #f0e5d7;
+.nav-button,
+.folder-tab,
+.retry-button,
+.contact-submit,
+.resume-button,
+.back-to-projects {
+  letter-spacing: 0.1em;
+}
+
+.nav-button:hover,
+.nav-button:focus-visible,
+.project-main-nav .nav-button:hover,
+.project-main-nav .nav-button:focus-visible {
+  border-color: #525bc7;
+  background: #525bc7;
+  color: #fff;
+  transform: scale(1.04);
+}
+
+.nav-button:active,
+.project-main-nav .nav-button:active {
+  border-color: var(--ink);
+  background: var(--ink);
+  color: #fff;
 }
 
 .folder-tabs {
@@ -264,7 +316,7 @@ textarea:focus-visible {
   background: transparent;
   color: var(--muted);
   cursor: pointer;
-  font-size: 11px;
+  font-size: 14px;
   font-weight: 550;
   transition:
     min-height 220ms ease,
@@ -311,9 +363,10 @@ textarea:focus-visible {
 
 .section-heading h2 {
   margin: 8px 0 0;
-  font-family: var(--serif);
+  font-family: var(--font-dm-serif-display), serif;
   font-size: clamp(58px, 8vw, 104px);
   font-weight: 400;
+  font-style: normal;
   letter-spacing: -0.07em;
   line-height: 0.92;
 }
@@ -437,21 +490,11 @@ textarea:focus-visible {
   margin-top: auto;
   padding-top: 22px;
   color: #b94e37;
-  font-size: 11px;
+  font-size: 13px;
   font-weight: 650;
   text-decoration: underline;
   text-decoration-color: #d89a76;
   text-underline-offset: 4px;
-}
-
-.project-card-link span {
-  font-size: 15px;
-  text-decoration: none;
-  transition: transform 180ms ease;
-}
-
-.case-study-card:hover .project-card-link span {
-  transform: translate(2px, -2px);
 }
 
 .card-art {
@@ -596,8 +639,8 @@ textarea:focus-visible {
 .card-context {
   margin: 0;
   color: var(--muted);
-  font-size: 13px;
-  line-height: 1.75;
+  font-size: 15px;
+  line-height: 1.8;
 }
 
 .card-summary {
@@ -725,9 +768,10 @@ textarea:focus-visible {
 .about-copy h2 {
   max-width: 650px;
   margin: 10px 0 20px;
-  font-family: var(--serif);
+  font-family: var(--font-dm-serif-display), serif;
   font-size: clamp(52px, 7vw, 88px);
   font-weight: 400;
+  font-style: normal;
   letter-spacing: -0.065em;
   line-height: 0.98;
 }
@@ -736,8 +780,8 @@ textarea:focus-visible {
 .about-detail {
   max-width: 610px;
   color: #65675d;
-  font-size: 13px;
-  line-height: 1.9;
+  font-size: 15px;
+  line-height: 1.85;
 }
 
 .about-intro {
@@ -835,9 +879,10 @@ textarea:focus-visible {
 .contact-heading h2 {
   max-width: 720px;
   margin: 10px 0 12px;
-  font-family: var(--serif);
+  font-family: var(--font-dm-serif-display), serif;
   font-size: clamp(50px, 7vw, 84px);
   font-weight: 400;
+  font-style: normal;
   letter-spacing: -0.065em;
   line-height: 1;
   color: #fffaf0;
@@ -939,7 +984,7 @@ textarea:focus-visible {
   margin-top: 12px;
   padding: 11px 18px;
   border: 1px solid #485744;
-  border-radius: 999px 999px 999px 12px;
+  border-radius: 999px;
   background: #485744;
   color: #fff;
   cursor: pointer;
@@ -1088,14 +1133,6 @@ textarea:focus-visible {
   font-size: 10px;
 }
 
-.project-home-link {
-  color: #b94e37;
-  font-size: 10px;
-  font-weight: 650;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-}
-
 .project-hero {
   padding: clamp(62px, 10vw, 126px) 7.3vw clamp(70px, 9vw, 110px);
   background: #e9674d;
@@ -1110,11 +1147,25 @@ textarea:focus-visible {
 .back-to-projects {
   display: inline-flex;
   align-items: center;
-  gap: 9px;
+  justify-content: center;
+  gap: 8px;
   margin-bottom: clamp(42px, 7vw, 82px);
-  color: #fff4d7;
+  padding: 10px 18px;
+  border: 1px solid rgb(226 217 202 / 84%);
+  border-radius: 999px;
+  background: rgb(251 248 240 / 94%);
+  color: var(--ink);
   font-size: 11px;
-  font-weight: 600;
+  font-weight: 550;
+  transition:
+    border-color 180ms ease,
+    background 180ms ease,
+    color 180ms ease;
+}
+
+.back-to-projects:hover {
+  border-color: #b96f55;
+  background: #f0e5d7;
 }
 
 .project-hero .section-kicker {
@@ -1124,9 +1175,10 @@ textarea:focus-visible {
 .project-hero h1 {
   max-width: 950px;
   margin: 14px 0 24px;
-  font-family: var(--serif);
+  font-family: var(--font-dm-serif-display), serif;
   font-size: clamp(54px, 9vw, 112px);
   font-weight: 400;
+  font-style: normal;
   letter-spacing: -0.075em;
   line-height: 0.94;
 }
@@ -1136,8 +1188,8 @@ textarea:focus-visible {
   margin: 0;
   color: #fff2e9;
   font-family: var(--serif);
-  font-size: clamp(18px, 2.3vw, 25px);
-  line-height: 1.5;
+  font-size: clamp(21px, 2.6vw, 29px);
+  line-height: 1.55;
 }
 
 .project-topic-list {
@@ -1177,13 +1229,13 @@ textarea:focus-visible {
   padding: 17px 0;
   border-bottom: 1px solid var(--line);
   color: #625d54;
-  font-size: 12px;
-  line-height: 1.6;
+  font-size: 15px;
+  line-height: 1.7;
 }
 
 .project-fact-label {
   color: #b94e37;
-  font-size: 9px;
+  font-size: 11px;
   font-weight: 700;
   letter-spacing: 0.13em;
   text-transform: uppercase;
@@ -1212,7 +1264,7 @@ textarea:focus-visible {
   padding-top: 6px;
   color: #b94e37;
   font-family: var(--serif);
-  font-size: 12px;
+  font-size: 14px;
   font-style: italic;
 }
 
@@ -1228,8 +1280,8 @@ textarea:focus-visible {
 .project-chapter p {
   margin: 2px 0 0;
   color: #656158;
-  font-size: 13px;
-  line-height: 1.9;
+  font-size: 16px;
+  line-height: 1.85;
 }
 
 .project-chapter-accent {
@@ -1253,7 +1305,7 @@ textarea:focus-visible {
   justify-self: start;
   margin-top: 24px;
   color: #b94e37;
-  font-size: 12px;
+  font-size: 14px;
   font-weight: 650;
   text-decoration: underline;
   text-underline-offset: 5px;
@@ -1345,6 +1397,19 @@ textarea:focus-visible {
     margin-top: -70px;
   }
 
+  .project-page .hero-meta {
+    grid-template-columns: 1fr;
+    gap: 10px 14px;
+  }
+
+  .project-main-nav {
+    grid-column: 1;
+  }
+
+  .project-main-nav .nav-actions {
+    justify-content: center;
+  }
+
   .folder-nav-inner {
     display: flex;
     width: 100%;
@@ -1374,14 +1439,15 @@ textarea:focus-visible {
     min-height: 54px;
     flex: 1 1 0;
     flex-direction: column;
-    gap: 4px;
+    gap: 6px;
     padding: 8px 3px 9px;
-    font-size: clamp(7px, 2.15vw, 9px);
+    font-size: clamp(9px, 2.6vw, 11px);
+    line-height: 1.2;
     text-align: center;
   }
 
   .folder-tab.is-active {
-    min-height: 60px;
+    min-height: 64px;
   }
 
   .work-section {

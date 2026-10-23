@@ -31,17 +31,22 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
         >
           GMS<span>.</span>
         </Link>
-        <Link className="project-home-link" href="/#work">
-          All projects <span aria-hidden="true">↗</span>
-        </Link>
+        <nav className="project-main-nav" aria-label="Main navigation">
+          <div className="nav-actions">
+            <Link className="nav-button" href="/#work">Work</Link>
+            <Link className="nav-button" href="/#about">About</Link>
+            <Link className="nav-button" href="/#contact">Contact</Link>
+          </div>
+        </nav>
+        <span className="hero-location">Working everywhere</span>
       </div>
 
       <header className="project-hero">
         <div className="project-hero-inner">
           <Link className="back-to-projects" href="/#work">
-            <span aria-hidden="true">←</span> Selected work
+            <span aria-hidden="true">←</span>
+            Back
           </Link>
-          <p className="section-kicker">Project story</p>
           <h1>{project.title}</h1>
           <p className="project-lede">{project.case_study.summary}</p>
           <div className="project-topic-list" aria-label="Project disciplines">
@@ -55,7 +60,7 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
       <section className="project-story" aria-label={`${project.title} case study`}>
         <div className="project-facts">
           <div>
-            <span className="project-fact-label">My role</span>
+            <span className="project-fact-label">Role</span>
             <span>{project.case_study.my_role}</span>
           </div>
           <div>
@@ -100,7 +105,7 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
               target="_blank"
               rel="noreferrer"
             >
-              View project presentation <span aria-hidden="true">↗</span>
+              View project presentation
             </a>
           )}
         </div>
@@ -108,7 +113,7 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
 
       <footer className="project-page-footer">
         <p>More thoughtful work, one story at a time.</p>
-        <Link href="/#work">Back to all projects <span aria-hidden="true">↑</span></Link>
+        <Link href="/#work">Back to all projects</Link>
       </footer>
     </main>
   );

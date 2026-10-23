@@ -143,7 +143,7 @@ export default function Home() {
                 })
               }
             >
-              My Work
+              Work
             </button>
             <button
               className="nav-button"
@@ -155,7 +155,7 @@ export default function Home() {
                 })
               }
             >
-              About Me
+              About
             </button>
             <button
               className="nav-button"
@@ -167,7 +167,7 @@ export default function Home() {
                 })
               }
             >
-              Contact Me
+              Contact
             </button>
           </div>
         </div>
@@ -176,7 +176,7 @@ export default function Home() {
       <section className="work-section" aria-labelledby="work-title">
         <div className="section-heading">
           <div>
-            <p className="section-kicker" id="work">Selected work</p>
+            <p className="section-kicker" id="work">My Work</p>
             <h2 id="work-title">
               A few things I&apos;ve made<span className="heading-period">.</span>
             </h2>
