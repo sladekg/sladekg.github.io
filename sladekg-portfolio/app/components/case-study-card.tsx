@@ -1,9 +1,11 @@
 type CaseStudyCardProps = {
   project: {
     title: string;
+    awards: number;
     presentation: string;
   };
   caseStudy: {
+    summary: string;
     context: string;
     my_role: string;
     action: string;
@@ -39,6 +41,13 @@ export default function CaseStudyCard({
           <span>{String(index + 1).padStart(2, "0")}</span>
         </div>
         <h3>{project.title}</h3>
+        <div className="card-awards" aria-label={`Award count for ${project.title}`}>
+          <span className="card-award-label">Awards</span>
+          <strong>{project.awards ?? 0}</strong>
+        </div>
+        {caseStudy.summary && (
+          <p className="card-summary card-context">{caseStudy.summary}</p>
+        )}
         <p className="card-context">{caseStudy.context}</p>
         <dl className="card-details">
           <div>

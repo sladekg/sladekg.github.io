@@ -16,6 +16,7 @@ type CategoryId = (typeof categories)[number]["id"];
 
 type CaseStudy = {
   topic: string;
+  summary: string;
   context: string;
   my_role: string;
   action: string;
@@ -25,6 +26,7 @@ type CaseStudy = {
 type Project = {
   title: string;
   topics: string[];
+  awards: number;
   case_studies: CaseStudy[];
   images: { src: string; alt: string }[];
   presentation: string;

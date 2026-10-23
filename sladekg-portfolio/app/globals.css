@@ -495,6 +495,40 @@ textarea:focus-visible {
   line-height: 1.7;
 }
 
+.card-summary {
+  margin-bottom: 12px;
+  color: #4b5142;
+  font-weight: 500;
+}
+
+.card-awards {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin: 12px 0 10px;
+  padding: 6px 10px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: #f2efe7;
+  color: var(--green);
+  font-size: 9px;
+  font-weight: 650;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+}
+
+.card-award-label {
+  color: var(--muted);
+}
+
+.card-awards strong {
+  color: var(--ink);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0;
+  text-transform: none;
+}
+
 .card-details {
   display: grid;
   gap: 10px;

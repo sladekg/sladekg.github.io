@@ -1,5 +1,5 @@
 {
-    "projects":[
+    "projects": [
         {
             "title": "MKE Domes",
             "topics": [
@@ -15,17 +15,19 @@
                     "context": "Lorem ipsum",
                     "my_role": "Lorem ipsum",
                     "action": "Lorem ipsum",
-                    "result": "Lorem ipsum"
+                    "result": "Lorem ipsum",
+                    "summary": "Lorem ipsum"
                 },
                 {
                     "topic": "product_strategy",
                     "context": "Lorem ipsum",
                     "my_role": "Lorem ipsum",
                     "action": "Lorem ipsum",
-                    "result": "Lorem ipsum"
+                    "result": "Lorem ipsum",
+                    "summary": "Lorem ipsum"
                 }
             ],
-            "images":[
+            "images": [
                 {
                     "src": "/images/mke-domes-1.png",
                     "alt": "MKE Domes"
@@ -35,12 +37,13 @@
                     "alt": "MKE Domes"
                 }
             ],
-            "presentation": "/pdfs/mke-domes.pdf"
+            "presentation": "/pdfs/mke-domes.pdf",
+            "awards": 0
         },
         {
             "title": "LS-ACT Excitation System Commissioning Application",
             "topics": [
-                "project_management", 
+                "project_management",
                 "product_design",
                 "product_strategy",
                 "user_research",
@@ -53,17 +56,19 @@
                     "context": "Lorem ipsum",
                     "my_role": "Lorem ipsum",
                     "action": "Lorem ipsum",
-                    "result": "Lorem ipsum"
+                    "result": "Lorem ipsum",
+                    "summary": "Lorem ipsum"
                 },
                 {
                     "topic": "product_design",
                     "context": "Lorem ipsum",
                     "my_role": "Lorem ipsum",
                     "action": "Lorem ipsum",
-                    "result": "Lorem ipsum"
+                    "result": "Lorem ipsum",
+                    "summary": "Lorem ipsum"
                 }
             ],
-            "images":[
+            "images": [
                 {
                     "src": "/images/ls-act-1.png",
                     "alt": "LS-ACT Excitation System Commissioning Application"
@@ -73,7 +78,8 @@
                     "alt": "LS-ACT Excitation System Commissioning Application"
                 }
             ],
-            "presentation": ""
+            "presentation": "",
+            "awards": 0
         },
         {
             "title": "Snap Inc.",
@@ -87,17 +93,19 @@
                     "context": "Lorem ipsum",
                     "my_role": "Lorem ipsum",
                     "action": "Lorem ipsum",
-                    "result": "Lorem ipsum"
+                    "result": "Lorem ipsum",
+                    "summary": "Lorem ipsum"
                 },
                 {
                     "topic": "user_research",
                     "context": "Lorem ipsum",
                     "my_role": "Lorem ipsum",
                     "action": "Lorem ipsum",
-                    "result": "Lorem ipsum"
+                    "result": "Lorem ipsum",
+                    "summary": "Lorem ipsum"
                 }
             ],
-            "images":[
+            "images": [
                 {
                     "src": "/images/snap-1.png",
                     "alt": "Snap Inc."
@@ -107,7 +115,8 @@
                     "alt": "Snap Inc."
                 }
             ],
-            "presentation": "/pdfs/snap-inc.pdf"
+            "presentation": "/pdfs/snap-inc.pdf",
+            "awards": 0
         },
         {
             "title": "Poppy Bakery",
@@ -121,10 +130,11 @@
                     "context": "Lorem ipsum",
                     "my_role": "Lorem ipsum",
                     "action": "Lorem ipsum",
-                    "result": "Lorem ipsum"
+                    "result": "Lorem ipsum",
+                    "summary": "Lorem ipsum"
                 }
             ],
-            "images":[
+            "images": [
                 {
                     "src": "/images/poppy-1.png",
                     "alt": "Poppy Bakery"
@@ -134,7 +144,8 @@
                     "alt": "Poppy Bakery"
                 }
             ],
-            "presentation": ""
+            "presentation": "",
+            "awards": 0
         },
         {
             "title": "Danceworks MKE",
@@ -148,10 +159,11 @@
                     "context": "Lorem ipsum",
                     "my_role": "Lorem ipsum",
                     "action": "Lorem ipsum",
-                    "result": "Lorem ipsum"
+                    "result": "Lorem ipsum",
+                    "summary": "Lorem ipsum"
                 }
             ],
-            "images":[
+            "images": [
                 {
                     "src": "/images/danceworks-1.png",
                     "alt": "Danceworks MKE"
@@ -161,7 +173,8 @@
                     "alt": "Danceworks MKE"
                 }
             ],
-            "presentation": ""
+            "presentation": "",
+            "awards": 0
         },
         {
             "title": "PIDGen",
@@ -177,17 +190,19 @@
                     "context": "Lorem ipsum",
                     "my_role": "Lorem ipsum",
                     "action": "Lorem ipsum",
-                    "result": "Lorem ipsum"
+                    "result": "Lorem ipsum",
+                    "summary": "Lorem ipsum"
                 },
                 {
                     "topic": "user_research",
                     "context": "Lorem ipsum",
                     "my_role": "Lorem ipsum",
                     "action": "Lorem ipsum",
-                    "result": "Lorem ipsum"
+                    "result": "Lorem ipsum",
+                    "summary": "Lorem ipsum"
                 }
             ],
-            "images":[
+            "images": [
                 {
                     "src": "/images/pidgen-1.png",
                     "alt": "PIDGen"
@@ -197,7 +212,8 @@
                     "alt": "PIDGen"
                 }
             ],
-            "presentation": "/pdfs/pidgen.pdf"
+            "presentation": "/pdfs/pidgen.pdf",
+            "awards": 0
         },
         {
             "title": "Discovery World",
@@ -214,17 +230,19 @@
                     "context": "Lorem ipsum",
                     "my_role": "Lorem ipsum",
                     "action": "Lorem ipsum",
-                    "result": "Lorem ipsum"
+                    "result": "Lorem ipsum",
+                    "summary": "Lorem ipsum"
                 },
                 {
                     "topic": "accessibility",
                     "context": "Lorem ipsum",
                     "my_role": "Lorem ipsum",
                     "action": "Lorem ipsum",
-                    "result": "Lorem ipsum"
+                    "result": "Lorem ipsum",
+                    "summary": "Lorem ipsum"
                 }
             ],
-            "images":[
+            "images": [
                 {
                     "src": "/images/discoveryworld-1.png",
                     "alt": "Discovery World"
@@ -234,7 +252,8 @@
                     "alt": "Discovery World"
                 }
             ],
-            "presentation": "/pdfs/discovery-world.pdf"
+            "presentation": "/pdfs/discovery-world.pdf",
+            "awards": 0
         },
         {
             "title": "Soap Bottle Made of Soap",
@@ -247,10 +266,11 @@
                     "context": "Lorem ipsum",
                     "my_role": "Lorem ipsum",
                     "action": "Lorem ipsum",
-                    "result": "Lorem ipsum"
+                    "result": "Lorem ipsum",
+                    "summary": "Lorem ipsum"
                 }
             ],
-            "images":[
+            "images": [
                 {
                     "src": "/images/soapbottle-1.png",
                     "alt": "Soap Bottle Made of Soap"
@@ -260,7 +280,8 @@
                     "alt": "Soap Bottle Made of Soap"
                 }
             ],
-            "presentation": "/pdfs/soap-bottle.pdf"
+            "presentation": "/pdfs/soap-bottle.pdf",
+            "awards": 0
         },
         {
             "title": "Phos Tech",
@@ -277,17 +298,19 @@
                     "context": "Lorem ipsum",
                     "my_role": "Lorem ipsum",
                     "action": "Lorem ipsum",
-                    "result": "Lorem ipsum"
+                    "result": "Lorem ipsum",
+                    "summary": "Lorem ipsum"
                 },
                 {
                     "topic": "product_strategy",
                     "context": "Lorem ipsum",
                     "my_role": "Lorem ipsum",
                     "action": "Lorem ipsum",
-                    "result": "Lorem ipsum"
+                    "result": "Lorem ipsum",
+                    "summary": "Lorem ipsum"
                 }
             ],
-            "images":[
+            "images": [
                 {
                     "src": "/images/phostech-1.png",
                     "alt": "Phos Tech"
@@ -297,7 +320,8 @@
                     "alt": "Phos Tech"
                 }
             ],
-            "presentation": "/pdfs/phos-tech.pdf"
+            "presentation": "/pdfs/phos-tech.pdf",
+            "awards": 0
         }
     ]
 }
