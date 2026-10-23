@@ -9,24 +9,6 @@
                 "stakeholder_interviews",
                 "accessibility"
             ],
-            "case_studies": [
-                {
-                    "topic": "product_design",
-                    "context": "Lorem ipsum",
-                    "my_role": "Lorem ipsum",
-                    "action": "Lorem ipsum",
-                    "result": "Lorem ipsum",
-                    "summary": "Lorem ipsum"
-                },
-                {
-                    "topic": "product_strategy",
-                    "context": "Lorem ipsum",
-                    "my_role": "Lorem ipsum",
-                    "action": "Lorem ipsum",
-                    "result": "Lorem ipsum",
-                    "summary": "Lorem ipsum"
-                }
-            ],
             "images": [
                 {
                     "src": "/images/mke-domes-1.png",
@@ -38,7 +20,14 @@
                 }
             ],
             "presentation": "/pdfs/mke-domes.pdf",
-            "awards": 0
+            "awards": 0,
+            "case_study": {
+                "context": "Lorem ipsum",
+                "my_role": "Lorem ipsum",
+                "action": "Lorem ipsum",
+                "result": "Lorem ipsum",
+                "summary": "Lorem ipsum"
+            }
         },
         {
             "title": "LS-ACT Excitation System Commissioning Application",
@@ -49,24 +38,6 @@
                 "user_research",
                 "stakeholder_interviews",
                 "accessibility"
-            ],
-            "case_studies": [
-                {
-                    "topic": "project_management",
-                    "context": "Lorem ipsum",
-                    "my_role": "Lorem ipsum",
-                    "action": "Lorem ipsum",
-                    "result": "Lorem ipsum",
-                    "summary": "Lorem ipsum"
-                },
-                {
-                    "topic": "product_design",
-                    "context": "Lorem ipsum",
-                    "my_role": "Lorem ipsum",
-                    "action": "Lorem ipsum",
-                    "result": "Lorem ipsum",
-                    "summary": "Lorem ipsum"
-                }
             ],
             "images": [
                 {
@@ -79,31 +50,20 @@
                 }
             ],
             "presentation": "",
-            "awards": 0
+            "awards": 0,
+            "case_study": {
+                "context": "Lorem ipsum",
+                "my_role": "Lorem ipsum",
+                "action": "Lorem ipsum",
+                "result": "Lorem ipsum",
+                "summary": "Lorem ipsum"
+            }
         },
         {
             "title": "Snap Inc.",
             "topics": [
                 "product_strategy",
                 "user_research"
-            ],
-            "case_studies": [
-                {
-                    "topic": "product_strategy",
-                    "context": "Lorem ipsum",
-                    "my_role": "Lorem ipsum",
-                    "action": "Lorem ipsum",
-                    "result": "Lorem ipsum",
-                    "summary": "Lorem ipsum"
-                },
-                {
-                    "topic": "user_research",
-                    "context": "Lorem ipsum",
-                    "my_role": "Lorem ipsum",
-                    "action": "Lorem ipsum",
-                    "result": "Lorem ipsum",
-                    "summary": "Lorem ipsum"
-                }
             ],
             "images": [
                 {
@@ -116,23 +76,20 @@
                 }
             ],
             "presentation": "/pdfs/snap-inc.pdf",
-            "awards": 0
+            "awards": 0,
+            "case_study": {
+                "context": "Lorem ipsum",
+                "my_role": "Lorem ipsum",
+                "action": "Lorem ipsum",
+                "result": "Lorem ipsum",
+                "summary": "Lorem ipsum"
+            }
         },
         {
             "title": "Poppy Bakery",
             "topics": [
                 "seo",
                 "consulting"
-            ],
-            "case_studies": [
-                {
-                    "topic": "seo",
-                    "context": "Lorem ipsum",
-                    "my_role": "Lorem ipsum",
-                    "action": "Lorem ipsum",
-                    "result": "Lorem ipsum",
-                    "summary": "Lorem ipsum"
-                }
             ],
             "images": [
                 {
@@ -145,23 +102,20 @@
                 }
             ],
             "presentation": "",
-            "awards": 0
+            "awards": 0,
+            "case_study": {
+                "context": "Lorem ipsum",
+                "my_role": "Lorem ipsum",
+                "action": "Lorem ipsum",
+                "result": "Lorem ipsum",
+                "summary": "Lorem ipsum"
+            }
         },
         {
             "title": "Danceworks MKE",
             "topics": [
                 "seo",
                 "consulting"
-            ],
-            "case_studies": [
-                {
-                    "topic": "seo",
-                    "context": "Lorem ipsum",
-                    "my_role": "Lorem ipsum",
-                    "action": "Lorem ipsum",
-                    "result": "Lorem ipsum",
-                    "summary": "Lorem ipsum"
-                }
             ],
             "images": [
                 {
@@ -174,7 +128,14 @@
                 }
             ],
             "presentation": "",
-            "awards": 0
+            "awards": 0,
+            "case_study": {
+                "context": "Lorem ipsum",
+                "my_role": "Lorem ipsum",
+                "action": "Lorem ipsum",
+                "result": "Lorem ipsum",
+                "summary": "Lorem ipsum"
+            }
         },
         {
             "title": "PIDGen",
@@ -183,24 +144,6 @@
                 "user_research",
                 "stakeholder_interviews",
                 "product_design"
-            ],
-            "case_studies": [
-                {
-                    "topic": "project_management",
-                    "context": "Lorem ipsum",
-                    "my_role": "Lorem ipsum",
-                    "action": "Lorem ipsum",
-                    "result": "Lorem ipsum",
-                    "summary": "Lorem ipsum"
-                },
-                {
-                    "topic": "user_research",
-                    "context": "Lorem ipsum",
-                    "my_role": "Lorem ipsum",
-                    "action": "Lorem ipsum",
-                    "result": "Lorem ipsum",
-                    "summary": "Lorem ipsum"
-                }
             ],
             "images": [
                 {
@@ -213,7 +156,14 @@
                 }
             ],
             "presentation": "/pdfs/pidgen.pdf",
-            "awards": 0
+            "awards": 0,
+            "case_study": {
+                "context": "Lorem ipsum",
+                "my_role": "Lorem ipsum",
+                "action": "Lorem ipsum",
+                "result": "Lorem ipsum",
+                "summary": "Lorem ipsum"
+            }
         },
         {
             "title": "Discovery World",
@@ -223,24 +173,6 @@
                 "product_strategy",
                 "product_design",
                 "stakeholder_interviews"
-            ],
-            "case_studies": [
-                {
-                    "topic": "user_research",
-                    "context": "Lorem ipsum",
-                    "my_role": "Lorem ipsum",
-                    "action": "Lorem ipsum",
-                    "result": "Lorem ipsum",
-                    "summary": "Lorem ipsum"
-                },
-                {
-                    "topic": "accessibility",
-                    "context": "Lorem ipsum",
-                    "my_role": "Lorem ipsum",
-                    "action": "Lorem ipsum",
-                    "result": "Lorem ipsum",
-                    "summary": "Lorem ipsum"
-                }
             ],
             "images": [
                 {
@@ -253,22 +185,19 @@
                 }
             ],
             "presentation": "/pdfs/discovery-world.pdf",
-            "awards": 0
+            "awards": 0,
+            "case_study": {
+                "context": "Lorem ipsum",
+                "my_role": "Lorem ipsum",
+                "action": "Lorem ipsum",
+                "result": "Lorem ipsum",
+                "summary": "Lorem ipsum"
+            }
         },
         {
             "title": "Soap Bottle Made of Soap",
             "topics": [
                 "product_design"
-            ],
-            "case_studies": [
-                {
-                    "topic": "product_design",
-                    "context": "Lorem ipsum",
-                    "my_role": "Lorem ipsum",
-                    "action": "Lorem ipsum",
-                    "result": "Lorem ipsum",
-                    "summary": "Lorem ipsum"
-                }
             ],
             "images": [
                 {
@@ -281,7 +210,14 @@
                 }
             ],
             "presentation": "/pdfs/soap-bottle.pdf",
-            "awards": 0
+            "awards": 0,
+            "case_study": {
+                "context": "Lorem ipsum",
+                "my_role": "Lorem ipsum",
+                "action": "Lorem ipsum",
+                "result": "Lorem ipsum",
+                "summary": "Lorem ipsum"
+            }
         },
         {
             "title": "Phos Tech",
@@ -291,24 +227,6 @@
                 "project_management",
                 "stakeholder_interviews",
                 "user_research"
-            ],
-            "case_studies": [
-                {
-                    "topic": "accessibility",
-                    "context": "Lorem ipsum",
-                    "my_role": "Lorem ipsum",
-                    "action": "Lorem ipsum",
-                    "result": "Lorem ipsum",
-                    "summary": "Lorem ipsum"
-                },
-                {
-                    "topic": "product_strategy",
-                    "context": "Lorem ipsum",
-                    "my_role": "Lorem ipsum",
-                    "action": "Lorem ipsum",
-                    "result": "Lorem ipsum",
-                    "summary": "Lorem ipsum"
-                }
             ],
             "images": [
                 {
@@ -321,7 +239,14 @@
                 }
             ],
             "presentation": "/pdfs/phos-tech.pdf",
-            "awards": 0
+            "awards": 0,
+            "case_study": {
+                "context": "Lorem ipsum",
+                "my_role": "Lorem ipsum",
+                "action": "Lorem ipsum",
+                "result": "Lorem ipsum",
+                "summary": "Lorem ipsum"
+            }
         }
     ]
 }

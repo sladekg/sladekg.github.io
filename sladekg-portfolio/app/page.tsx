@@ -15,7 +15,6 @@ const categories = [
 type CategoryId = (typeof categories)[number]["id"];
 
 type CaseStudy = {
-  topic: string;
   summary: string;
   context: string;
   my_role: string;
@@ -27,7 +26,7 @@ type Project = {
   title: string;
   topics: string[];
   awards: number;
-  case_studies: CaseStudy[];
+  case_study: CaseStudy;
   images: { src: string; alt: string }[];
   presentation: string;
 };
@@ -104,11 +103,9 @@ export default function Home() {
   const selectedCategory = categories.find(
     (category) => category.id === activeCategory,
   );
-  const caseStudies = projects.flatMap((project) =>
-    project.case_studies
-      .filter((caseStudy) => caseStudy.topic === activeCategory)
-      .map((caseStudy) => ({ project, caseStudy })),
-  );
+  const caseStudies = projects
+    .filter((project) => project.topics.includes(activeCategory))
+    .map((project) => ({ project, caseStudy: project.case_study }));
 
   function handleContactSubmit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
@@ -243,7 +240,7 @@ export default function Home() {
               <div className="case-study-grid">
                 {caseStudies.map(({ project, caseStudy }, index) => (
                   <CaseStudyCard
-                    key={`${project.title}-${caseStudy.topic}`}
+                    key={project.title}
                     project={project}
                     caseStudy={caseStudy}
                     categoryLabel={selectedCategory?.label ?? activeCategory}
