@@ -20,13 +20,13 @@
                 }
             ],
             "presentation": "/pdfs/mke-domes.pdf",
-            "awards": 0,
+            "awards": 1,
             "case_study": {
-                "context": "Lorem ipsum",
+                "context": "Our goal was to create a personalized, structured, and engageing experience that deepens users' connection to nature while increasing revenue and encouraging yearly membership subscriptions. We had three days to put this project in action.",
                 "my_role": "Lorem ipsum",
                 "action": "Lorem ipsum",
                 "result": "Lorem ipsum",
-                "summary": "Lorem ipsum"
+                "summary": "Creating an AI-centric solution to increase revenue and user engagement at the Milwaukee Domes Alliance non-profit through the MSOE A. I. Club hackathon."
             }
         },
         {
