@@ -1,11 +1,17 @@
 import type { Metadata } from "next";
-import { DM_Serif_Display } from "next/font/google";
+import { DM_Sans, DM_Serif_Display } from "next/font/google";
 import "./globals.css";
 
 const dmSerifDisplay = DM_Serif_Display({
   weight: "400",
   subsets: ["latin"],
   variable: "--font-dm-serif-display",
+});
+
+const dmSans = DM_Sans({
+  weight: ["500", "600"],
+  subsets: ["latin"],
+  variable: "--font-dm-sans",
 });
 
 export const metadata: Metadata = {
@@ -17,7 +23,9 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
     <html lang="en">
-      <body className={dmSerifDisplay.variable}>{children}</body>
+      <body className={`${dmSerifDisplay.variable} ${dmSans.variable}`}>
+        {children}
+      </body>
     </html>
   );
 }

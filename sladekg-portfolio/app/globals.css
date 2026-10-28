@@ -274,8 +274,14 @@ textarea:focus-visible {
 .retry-button,
 .contact-submit,
 .resume-button,
-.back-to-projects {
-  letter-spacing: 0.1em;
+.back-to-projects,
+.project-card-link,
+.presentation-link,
+.about-contact-link,
+.footer-top,
+.project-presentation-link {
+  font-family: var(--font-dm-sans), sans-serif;
+  letter-spacing: -0.035em;
 }
 
 .nav-button:hover,
@@ -316,8 +322,10 @@ textarea:focus-visible {
   background: transparent;
   color: var(--muted);
   cursor: pointer;
+  font-family: var(--font-dm-sans), sans-serif;
   font-size: 14px;
   font-weight: 550;
+  letter-spacing: -0.035em;
   transition:
     min-height 220ms ease,
     color 220ms ease,
@@ -629,10 +637,10 @@ textarea:focus-visible {
 
 .card-copy h3 {
   margin: 13px 0 9px;
-  font-family: var(--serif);
+  font-family: var(--font-dm-sans), sans-serif;
   font-size: clamp(28px, 3vw, 40px);
-  font-weight: 400;
-  letter-spacing: -0.06em;
+  font-weight: 500;
+  letter-spacing: -0.035em;
   line-height: 1.02;
 }
 
