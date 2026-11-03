@@ -585,19 +585,6 @@ textarea:focus-visible {
   text-shadow: 0 4px 18px rgb(48 42 40 / 12%);
 }
 
-.art-caption {
-  position: absolute;
-  right: 20px;
-  bottom: 18px;
-  left: 20px;
-  display: flex;
-  justify-content: space-between;
-  color: rgb(48 42 40 / 74%);
-  font-size: 9px;
-  font-style: italic;
-  letter-spacing: 0.04em;
-}
-
 .card-copy {
   display: flex;
   flex: 1;

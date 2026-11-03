@@ -27,7 +27,6 @@ export default function CaseStudyCard({
         <span className="art-label">
           {project.title.slice(0, 2).toUpperCase()}
         </span>
-        <span className="art-caption">Project notes</span>
       </div>
       <div className="card-copy">
         <div className="card-meta">
