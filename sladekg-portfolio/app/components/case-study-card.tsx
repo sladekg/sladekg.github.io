@@ -15,7 +15,9 @@ export default function CaseStudyCard({
       className="case-study-card"
       href={`/projects/${projectSlug(project.title)}`}
       style={{ animationDelay: `${index * 90 + 100}ms` }}
-      aria-label={`Read the ${project.title} project story`}
+      aria-label={`Read the ${project.title} project story. ${
+        project.impact.value !== null ? `${project.impact.value} ` : ""
+      }${project.impact.description}.`}
     >
       <div className="card-art" aria-hidden="true">
         <span className="art-shape art-shape-one" />
@@ -39,6 +41,18 @@ export default function CaseStudyCard({
           ))}
         </div>
         <p className="card-context">{project.case_study.summary}</p>
+        <div className="card-impact">
+          <div className="card-impact-result">
+            {project.impact.value !== null && (
+              <strong className="card-impact-value">
+                {project.impact.value}
+              </strong>
+            )}
+            <p className="card-impact-description">
+              {project.impact.description}
+            </p>
+          </div>
+        </div>
         <span className="project-card-link">Read project story</span>
       </div>
     </Link>

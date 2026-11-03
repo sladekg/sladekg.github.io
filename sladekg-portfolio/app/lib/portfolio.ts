@@ -10,6 +10,10 @@ export type Project = {
   title: string;
   topics: string[];
   awards: number;
+  impact: {
+    value: string | null;
+    description: string;
+  };
   case_study: CaseStudy;
   images: { src: string; alt: string }[];
   presentation: string;

@@ -21,6 +21,10 @@
             ],
             "presentation": "/pdfs/mke-domes.pdf",
             "awards": 1,
+            "impact": {
+                "value": "",
+                "description": "Results coming soon"
+            },
             "case_study": {
                 "context": "Our goal was to create a personalized, structured, and engageing experience that deepens users' connection to nature while increasing revenue and encouraging yearly membership subscriptions. We had three days to put this project in action.",
                 "my_role": "Lorem ipsum",
@@ -51,6 +55,10 @@
             ],
             "presentation": "",
             "awards": 0,
+            "impact": {
+                "value": "50%",
+                "description": "less configuration time through my workflow redesigns"
+            },
             "case_study": {
                 "context": "Lorem ipsum",
                 "my_role": "Lorem ipsum",
@@ -77,6 +85,10 @@
             ],
             "presentation": "/pdfs/snap-inc.pdf",
             "awards": 0,
+            "impact": {
+                "value": "0",
+                "description": "Results coming soon"
+            },
             "case_study": {
                 "context": "Lorem ipsum",
                 "my_role": "Lorem ipsum",
@@ -103,6 +115,10 @@
             ],
             "presentation": "",
             "awards": 0,
+            "impact": {
+                "value": "0",
+                "description": "Results coming soon"
+            },
             "case_study": {
                 "context": "Lorem ipsum",
                 "my_role": "Lorem ipsum",
@@ -129,6 +145,10 @@
             ],
             "presentation": "",
             "awards": 0,
+            "impact": {
+                "value": "0",
+                "description": "Results coming soon"
+            },
             "case_study": {
                 "context": "Lorem ipsum",
                 "my_role": "Lorem ipsum",
@@ -157,6 +177,10 @@
             ],
             "presentation": "/pdfs/pidgen.pdf",
             "awards": 0,
+            "impact": {
+                "value": "0",
+                "description": "Results coming soon"
+            },
             "case_study": {
                 "context": "Lorem ipsum",
                 "my_role": "Lorem ipsum",
@@ -186,6 +210,10 @@
             ],
             "presentation": "/pdfs/discovery-world.pdf",
             "awards": 0,
+            "impact": {
+                "value": "0",
+                "description": "Results coming soon"
+            },
             "case_study": {
                 "context": "Lorem ipsum",
                 "my_role": "Lorem ipsum",
@@ -211,6 +239,10 @@
             ],
             "presentation": "/pdfs/soap-bottle.pdf",
             "awards": 0,
+            "impact": {
+                "value": "0",
+                "description": "Results coming soon"
+            },
             "case_study": {
                 "context": "Lorem ipsum",
                 "my_role": "Lorem ipsum",
@@ -240,6 +272,10 @@
             ],
             "presentation": "/pdfs/phos-tech.pdf",
             "awards": 0,
+            "impact": {
+                "value": "0",
+                "description": "Results coming soon"
+            },
             "case_study": {
                 "context": "Lorem ipsum",
                 "my_role": "Lorem ipsum",

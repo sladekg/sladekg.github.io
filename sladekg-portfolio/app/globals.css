@@ -638,6 +638,43 @@ textarea:focus-visible {
   line-height: 1.8;
 }
 
+.card-impact {
+  width: 100%;
+  margin-top: 20px;
+  padding: 14px 16px;
+  border: 1px solid #e2d9ca;
+  border-left: 3px solid #b94e37;
+  border-radius: 8px 34px 8px 34px;
+  background: #f3e8da;
+}
+
+.card-impact-result {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.card-impact-value {
+  flex: 0 0 auto;
+  color: #b94e37;
+  font-family: var(--font-dm-sans), sans-serif;
+  font-size: clamp(28px, 3vw, 36px);
+  font-weight: 600;
+  letter-spacing: -0.05em;
+  line-height: 1;
+}
+
+.card-impact-description {
+  margin: 0;
+  font-family: var(--font-dm-sans), sans-serif;
+  font-size: 16px;
+  line-height: 1.4;
+}
+
+.card-impact-description {
+  color: #4b5142;
+}
+
 .card-summary {
   margin-bottom: 12px;
   color: #4b5142;
