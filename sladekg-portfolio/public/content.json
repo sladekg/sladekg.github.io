@@ -22,15 +22,15 @@
             "presentation": "/pdfs/mke-domes.pdf",
             "awards": 1,
             "impact": {
-                "value": "",
-                "description": "Results coming soon"
+                "value": null,
+                "description": "1st place at the MSOE AI Club Hacksgiving hackathon"
             },
             "case_study": {
-                "context": "Our goal was to create a personalized, structured, and engageing experience that deepens users' connection to nature while increasing revenue and encouraging yearly membership subscriptions. We had three days to put this project in action.",
-                "my_role": "Lorem ipsum",
-                "action": "Lorem ipsum",
-                "result": "Lorem ipsum",
-                "summary": "Creating an AI-centric solution to increase revenue and user engagement at the Milwaukee Domes Alliance non-profit through the MSOE A. I. Club hackathon."
+                "context": "The Milwaukee Domes Alliance wanted to increase visitor engagement and revenue. The project was completed during a 50-hour MSOE AI Club hackathon.",
+                "my_role": "UX product designer and researcher; presenter.",
+                "action": "Interviewed the CEO and education director, researched visitor needs, prototyped AI visitor experiences in Figma, field-tested the concept, and presented it.",
+                "result": "The tested concept combined a plant-focused voice assistant, AI-generated tours, and a photo-based scavenger hunt. The team won first place.",
+                "summary": "Designed and tested an AI-powered experience to grow visitor engagement and revenue for the Milwaukee Domes Alliance."
             }
         },
         {
@@ -209,17 +209,17 @@
                 }
             ],
             "presentation": "/pdfs/discovery-world.pdf",
-            "awards": 0,
+            "awards": 1,
             "impact": {
-                "value": "0",
-                "description": "Results coming soon"
+                "value": null,
+                "description": "2nd place in the MSOE AI Club Discovery World hackathon"
             },
             "case_study": {
-                "context": "Lorem ipsum",
-                "my_role": "Lorem ipsum",
-                "action": "Lorem ipsum",
-                "result": "Lorem ipsum",
-                "summary": "Lorem ipsum"
+                "context": "Discovery World needed a cost-effective, technology-based way to make exhibits more accessible. The project ran for 50 hours.",
+                "my_role": "UX researcher and designer; presentation creator.",
+                "action": "Observed visitors using existing accessibility tools, consulted stakeholders, identified user needs, and prototyped a Bluetooth-locator chatbot with age-adjusted exhibit responses.",
+                "result": "The team earned second place with a low-cost accessibility concept designed to require little effort from visitors.",
+                "summary": "Designed an accessible, age-aware exhibit chatbot for Discovery World with the MSOE AI Club."
             }
         },
         {
@@ -240,15 +240,15 @@
             "presentation": "/pdfs/soap-bottle.pdf",
             "awards": 0,
             "impact": {
-                "value": "0",
-                "description": "Results coming soon"
+                "value": null,
+                "description": "High-fidelity sustainable soap-bottle prototype; no quantified impact reported"
             },
             "case_study": {
-                "context": "Lorem ipsum",
-                "my_role": "Lorem ipsum",
-                "action": "Lorem ipsum",
-                "result": "Lorem ipsum",
-                "summary": "Lorem ipsum"
+                "context": "The 14-week industrial design project aimed to create a sustainable physical product ready for theoretical publication.",
+                "my_role": "Project owner, designer, and researcher.",
+                "action": "Researched comparable products, refined CAD and mold designs, 3D-printed molds, tested materials, and iterated from feedback.",
+                "result": "Created a high-fidelity prototype of a hand-soap bottle made from recycled hotel soaps, with a reusable soap outer bottle.",
+                "summary": "Designed a reusable hand-soap bottle made entirely from soap to reduce packaging waste."
             }
         },
         {
