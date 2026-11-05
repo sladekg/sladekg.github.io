@@ -1485,6 +1485,7 @@ textarea:focus-visible {
 }
 
 .project-chapter-approach {
+  grid-template-columns: minmax(0, 1fr);
   background: #c9b9ee;
 }
 
@@ -1492,7 +1493,33 @@ textarea:focus-visible {
   color: #4650aa;
 }
 
-.project-chapter-approach p {
+.project-chapter-approach .project-action-list {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+  margin: 2px 0 0;
+  padding: 0;
+  list-style: none;
+  color: #36334a;
+  font-size: 15px;
+  line-height: 1.9;
+}
+
+.project-chapter-approach .project-action-list li {
+  padding: 20px;
+  border-radius: 12px;
+  background: #fffdf8;
+}
+
+.project-chapter-approach .project-action-list h4 {
+  margin: 0 0 6px;
+  color: #36334a;
+  font-size: 16px;
+  line-height: 1.4;
+}
+
+.project-chapter-approach .project-action-list p {
+  margin: 0;
   color: #36334a;
 }
 
@@ -1602,6 +1629,12 @@ textarea:focus-visible {
   to {
     opacity: 1;
     transform: translateY(0);
+  }
+}
+
+@media (max-width: 960px) {
+  .project-chapter-approach .project-action-list {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
 
@@ -1801,6 +1834,10 @@ textarea:focus-visible {
     grid-template-columns: 1fr;
     gap: 17px;
     padding: 28px;
+  }
+
+  .project-chapter-approach .project-action-list {
+    grid-template-columns: 1fr;
   }
 
   .project-page-footer {

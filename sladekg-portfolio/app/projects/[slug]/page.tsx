@@ -138,7 +138,14 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
               <span>02</span>
               <h3>The approach</h3>
             </div>
-            <p>{project.case_study.action}</p>
+            <ul className="project-action-list">
+              {project.case_study.action.map((action) => (
+                <li key={action.action_title}>
+                  <h4>{action.action_title}</h4>
+                  <p>{action.action_description}</p>
+                </li>
+              ))}
+            </ul>
           </section>
 
           <section className="project-chapter project-chapter-outcome">

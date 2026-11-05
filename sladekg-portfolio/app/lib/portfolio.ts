@@ -2,7 +2,10 @@ export type CaseStudy = {
   summary: string;
   context: string;
   my_role: string;
-  action: string;
+  action: {
+    action_title: string;
+    action_description: string;
+  }[];
   result: string;
 };
 

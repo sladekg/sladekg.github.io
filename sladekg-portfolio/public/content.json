@@ -28,7 +28,12 @@
             "case_study": {
                 "context": "The Milwaukee Domes Alliance wanted to increase visitor engagement and revenue. The project was completed during a 50-hour MSOE AI Club hackathon.",
                 "my_role": "UX product designer and researcher; presenter.",
-                "action": "Interviewed the CEO and education director, researched visitor needs, prototyped AI visitor experiences in Figma, field-tested the concept, and presented it.",
+                "action": [
+                    {
+                        "action_title": "Research and prototyping",
+                        "action_description": "Interviewed the CEO and education director, researched visitor needs, prototyped AI visitor experiences in Figma, field-tested the concept, and presented it."
+                    }
+                ],
                 "result": "The tested concept combined a plant-focused voice assistant, AI-generated tours, and a photo-based scavenger hunt. The team won first place.",
                 "summary": "Designed and tested an AI-powered experience to grow visitor engagement and revenue for the Milwaukee Domes Alliance."
             }
@@ -60,41 +65,35 @@
                 "description": "less configuration time through my workflow redesigns"
             },
             "case_study": {
-                "context": " L & S Electric needed a modern desktop app for configuring and controlling its 
-                AES-110 and AES-1100 hydro-electric power excitation systems. The users are electrical engineers
-                    and field technicians (both inside and outside of L & S Electric, Inc.) working live with power generation equipment, where a misread
-                    value or mis-click has drastic consequences. The app had to combine real-time metering, a
-                    multi-channel oscilloscope, COMTRADE fault-file analysis, synchroscope and capability
-                    curve displays, and automated control sequences.",
+                "context": "L & S Electric needed a modern desktop app for configuring and controlling its AES-110 and AES-1100 hydro-electric power excitation systems. The users are electrical engineers and field technicians (both inside and outside of L & S Electric, Inc.) working live with power generation equipment, where a misread value or mis-click has drastic consequences. The app had to combine real-time metering, a multi-channel oscilloscope, COMTRADE fault-file analysis, synchroscope and capability curve displays, and automated control sequences.",
                 "my_role": "Lead User Experience Designer, Researcher, and Writer",
-                "action": "Stakeholder research: I ran working sessions with L & S electrical engineers to
-                    understand how they commission, tune, and troubleshoot excitation systems, and
-                    which readings they need side by side during each task. I also shadowed a technician
-                    through a commissioning workflow on the legacy tool.
-                    Information architecture: I organized screens into task-based modes
-                    (configuration, monitoring, control, fault analysis) so engineers could move between
-                    them without losing context. A/B testing with 4 to 5 engineers shaped the
-                    navigation.
-                    Interaction design for high-stakes control: I designed the auto-control and sequence
-                    screens with clear state indicators, confirmation steps for irreversible commands, and
-                    consistent placement of critical readings while making sure to follow L & S's own accessibility and HMI standards.
-                    Data visualization: I designed the oscilloscope and COMTRADE views — channel
-                    toggles, zoom bands, and RMS/frequency/phase measurement readouts — so
-                    engineers could isolate a fault window quickly.
-                    Design system: I created a reusable component library (gauges, metering tiles, alarm
-                    states) that let development scale consistently.
-                    Validation: I reviewed builds with engineers each iteration and refined layouts based
-                    on what they actually looked for first, conducting usability walkthroughs at roughly every
-                    two to four weeks. I also experimented with field testing during QA testing for AES-110s.",
-                "result": "One unified, scalable tool replaced several outdated tools for configuring, monitoring,
-                    and analyzing excitation systems. 
-                    Configuration time decreased by about 50%. 
-                    Engineers can analyze historical fault events in the same oscilloscope interface they
-                    use live, shortening root-cause analysis from hours to minutes.
-                    Consistent patterns across all pages reduce training time for new technicians
-                    and lower the risk of operator error on live equipment.
-                    The product gives L & S a modern, branded software experience to pair with their
-                    hardware in customer sales.",
+                "action": [
+                    {
+                        "action_title": "Stakeholder Research",
+                        "action_description": "I ran working sessions with L & S electrical engineers to understand how they commission, tune, and troubleshoot excitation systems, and which readings they need side by side during each task. I also shadowed a technician through a commissioning workflow on the legacy tool."
+                    },
+                    {
+                        "action_title": "Information Architecture",
+                        "action_description": "I organized screens into task-based modes (configuration, monitoring, control, fault analysis) so engineers could move between them without losing context. A/B testing with 4 to 5 engineers shaped the navigation."
+                    },
+                    {
+                        "action_title": "Interaction Design for High-Stakes Control",
+                        "action_description": "I designed the auto-control and sequence screens with clear state indicators, confirmation steps for irreversible commands, and consistent placement of critical readings while making sure to follow L & S's own accessibility and HMI standards."
+                    },
+                    {
+                        "action_title": "Data Visualization",
+                        "action_description": "I designed the oscilloscope and COMTRADE views — channel toggles, zoom bands, and RMS/frequency/phase measurement readouts — so engineers could isolate a fault window quickly."
+                    },
+                    {
+                        "action_title": "Design System",
+                        "action_description": "I created a reusable component library (gauges, metering tiles, alarm states) that let development scale consistently."
+                    },
+                    {
+                        "action_title": "Validation",
+                        "action_description": "I reviewed builds with engineers each iteration and refined layouts based on what they actually looked for first, conducting usability walkthroughs at roughly every two to four weeks. I also experimented with field testing during QA testing for AES-110s."
+                    }
+                ],
+                "result": "One unified, scalable tool replaced several outdated tools for configuring, monitoring, and analyzing excitation systems. Configuration time decreased by about 50%. Engineers can analyze historical fault events in the same oscilloscope interface they use live, shortening root-cause analysis from hours to minutes. Consistent patterns across all pages reduce training time for new technicians and lower the risk of operator error on live equipment. The product gives L & S a modern, branded software experience to pair with their hardware in customer sales.",
                 "summary": "Lorem ipsum"
             }
         },
@@ -123,7 +122,12 @@
             "case_study": {
                 "context": "Lorem ipsum",
                 "my_role": "Lorem ipsum",
-                "action": "Lorem ipsum",
+                "action": [
+                    {
+                        "action_title": "Project work",
+                        "action_description": "Lorem ipsum"
+                    }
+                ],
                 "result": "Lorem ipsum",
                 "summary": "Lorem ipsum"
             }
@@ -153,7 +157,12 @@
             "case_study": {
                 "context": "Lorem ipsum",
                 "my_role": "Lorem ipsum",
-                "action": "Lorem ipsum",
+                "action": [
+                    {
+                        "action_title": "Project work",
+                        "action_description": "Lorem ipsum"
+                    }
+                ],
                 "result": "Lorem ipsum",
                 "summary": "Lorem ipsum"
             }
@@ -183,7 +192,12 @@
             "case_study": {
                 "context": "Lorem ipsum",
                 "my_role": "Lorem ipsum",
-                "action": "Lorem ipsum",
+                "action": [
+                    {
+                        "action_title": "Project work",
+                        "action_description": "Lorem ipsum"
+                    }
+                ],
                 "result": "Lorem ipsum",
                 "summary": "Lorem ipsum"
             }
@@ -215,7 +229,12 @@
             "case_study": {
                 "context": "Lorem ipsum",
                 "my_role": "Lorem ipsum",
-                "action": "Lorem ipsum",
+                "action": [
+                    {
+                        "action_title": "Project work",
+                        "action_description": "Lorem ipsum"
+                    }
+                ],
                 "result": "Lorem ipsum",
                 "summary": "Lorem ipsum"
             }
@@ -248,7 +267,12 @@
             "case_study": {
                 "context": "Discovery World needed a cost-effective, technology-based way to make exhibits more accessible. The project ran for 50 hours.",
                 "my_role": "UX researcher and designer; presentation creator.",
-                "action": "Observed visitors using existing accessibility tools, consulted stakeholders, identified user needs, and prototyped a Bluetooth-locator chatbot with age-adjusted exhibit responses.",
+                "action": [
+                    {
+                        "action_title": "Accessibility Research and Prototyping",
+                        "action_description": "Observed visitors using existing accessibility tools, consulted stakeholders, identified user needs, and prototyped a Bluetooth-locator chatbot with age-adjusted exhibit responses."
+                    }
+                ],
                 "result": "The team earned second place with a low-cost accessibility concept designed to require little effort from visitors.",
                 "summary": "Designed an accessible, age-aware exhibit chatbot for Discovery World with the MSOE AI Club."
             }
@@ -277,7 +301,12 @@
             "case_study": {
                 "context": "The 14-week industrial design project aimed to create a sustainable physical product ready for theoretical publication.",
                 "my_role": "Project owner, designer, and researcher.",
-                "action": "Researched comparable products, refined CAD and mold designs, 3D-printed molds, tested materials, and iterated from feedback.",
+                "action": [
+                    {
+                        "action_title": "Product Research and Iteration",
+                        "action_description": "Researched comparable products, refined CAD and mold designs, 3D-printed molds, tested materials, and iterated from feedback."
+                    }
+                ],
                 "result": "Created a high-fidelity prototype of a hand-soap bottle made from recycled hotel soaps, with a reusable soap outer bottle.",
                 "summary": "Designed a reusable hand-soap bottle made entirely from soap to reduce packaging waste."
             }
@@ -310,7 +339,12 @@
             "case_study": {
                 "context": "Lorem ipsum",
                 "my_role": "Lorem ipsum",
-                "action": "Lorem ipsum",
+                "action": [
+                    {
+                        "action_title": "Project work",
+                        "action_description": "Lorem ipsum"
+                    }
+                ],
                 "result": "Lorem ipsum",
                 "summary": "Lorem ipsum"
             }
