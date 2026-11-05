@@ -60,10 +60,41 @@
                 "description": "less configuration time through my workflow redesigns"
             },
             "case_study": {
-                "context": "Lorem ipsum",
-                "my_role": "Lorem ipsum",
-                "action": "Lorem ipsum",
-                "result": "Lorem ipsum",
+                "context": " L & S Electric needed a modern desktop app for configuring and controlling its 
+                AES-110 and AES-1100 hydro-electric power excitation systems. The users are electrical engineers
+                    and field technicians (both inside and outside of L & S Electric, Inc.) working live with power generation equipment, where a misread
+                    value or mis-click has drastic consequences. The app had to combine real-time metering, a
+                    multi-channel oscilloscope, COMTRADE fault-file analysis, synchroscope and capability
+                    curve displays, and automated control sequences.",
+                "my_role": "Lead User Experience Designer, Researcher, and Writer",
+                "action": "Stakeholder research: I ran working sessions with L & S electrical engineers to
+                    understand how they commission, tune, and troubleshoot excitation systems, and
+                    which readings they need side by side during each task. I also shadowed a technician
+                    through a commissioning workflow on the legacy tool.
+                    Information architecture: I organized screens into task-based modes
+                    (configuration, monitoring, control, fault analysis) so engineers could move between
+                    them without losing context. A/B testing with 4 to 5 engineers shaped the
+                    navigation.
+                    Interaction design for high-stakes control: I designed the auto-control and sequence
+                    screens with clear state indicators, confirmation steps for irreversible commands, and
+                    consistent placement of critical readings while making sure to follow L & S's own accessibility and HMI standards.
+                    Data visualization: I designed the oscilloscope and COMTRADE views — channel
+                    toggles, zoom bands, and RMS/frequency/phase measurement readouts — so
+                    engineers could isolate a fault window quickly.
+                    Design system: I created a reusable component library (gauges, metering tiles, alarm
+                    states) that let development scale consistently.
+                    Validation: I reviewed builds with engineers each iteration and refined layouts based
+                    on what they actually looked for first, conducting usability walkthroughs at roughly every
+                    two to four weeks. I also experimented with field testing during QA testing for AES-110s.",
+                "result": "One unified, scalable tool replaced several outdated tools for configuring, monitoring,
+                    and analyzing excitation systems. 
+                    Configuration time decreased by about 50%. 
+                    Engineers can analyze historical fault events in the same oscilloscope interface they
+                    use live, shortening root-cause analysis from hours to minutes.
+                    Consistent patterns across all pages reduce training time for new technicians
+                    and lower the risk of operator error on live equipment.
+                    The product gives L & S a modern, branded software experience to pair with their
+                    hardware in customer sales.",
                 "summary": "Lorem ipsum"
             }
         },
