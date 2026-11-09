@@ -42,13 +42,15 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
         <span className="hero-location">Working everywhere</span>
       </div>
 
+      <Link className="back-to-projects" href="/#work">
+        <span aria-hidden="true">←</span>
+        All projects
+      </Link>
+
       <header className="project-hero">
         <div className="project-hero-inner">
-          <div className="project-hero-topline">
-            <Link className="back-to-projects" href="/#work">
-              <span aria-hidden="true">←</span>
-              All projects
-            </Link>
+          <div className="project-hero-kicker">
+            <p className="project-eyebrow">Selected work / Case study</p>
             <span className="project-file-number">
               Case file {String(projectIndex + 1).padStart(2, "0")}
             </span>
@@ -56,7 +58,6 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
 
           <div className="project-hero-grid">
             <div className="project-hero-copy">
-              <p className="project-eyebrow">Selected work / Case study</p>
               <h1>{project.title}</h1>
               <p className="project-lede">{project.case_study.summary}</p>
               <div className="project-topic-list" aria-label="Project disciplines">
