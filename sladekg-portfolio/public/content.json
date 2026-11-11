@@ -26,16 +26,24 @@
                 "description": "1st place at the MSOE AI Club Hacksgiving hackathon"
             },
             "case_study": {
-                "context": "The Milwaukee Domes Alliance wanted to increase visitor engagement and revenue. The project was completed during a 50-hour MSOE AI Club hackathon.",
+                "context": "The Milwaukee Domes Alliance wanted to increase visitor engagement and revenue while supporting its upcoming renovation. Our team developed a concept during a 50-hour MSOE AI Club Hacksgiving hackathon.",
                 "my_role": "UX product designer and researcher; presenter.",
                 "action": [
                     {
-                        "action_title": "Research and prototyping",
-                        "action_description": "Interviewed the CEO and education director, researched visitor needs, prototyped AI visitor experiences in Figma, field-tested the concept, and presented it."
+                        "action_title": "Stakeholder and visitor research",
+                        "action_description": "Interviewed the CEO and education director, reviewed the current website and planned changes, and identified visitor use cases and opportunities to support the Domes."
+                    },
+                    {
+                        "action_title": "Concept design and prototyping",
+                        "action_description": "Sketched ideas in Microsoft Whiteboard and prototyped an AI-powered visitor experience in Figma, including Botanical Tales, Sip & Seek tours, and the Dome Detectives photo scavenger hunt."
+                    },
+                    {
+                        "action_title": "Field testing and presentation",
+                        "action_description": "Field-tested the interactive concept at the Domes, handed it off to software engineers for implementation, and prepared and presented a proposal to stakeholders and judges."
                     }
                 ],
-                "result": "The tested concept combined a plant-focused voice assistant, AI-generated tours, and a photo-based scavenger hunt. The team won first place.",
-                "summary": "Designed and tested an AI-powered experience to grow visitor engagement and revenue for the Milwaukee Domes Alliance."
+                "result": "Field testing showed the concept worked as intended and was entertaining and informative for visitors. The team won first place in the Hacksgiving hackathon.",
+                "summary": "Prototyped and field-tested an AI-powered visitor experience designed to support engagement and revenue at the Milwaukee Domes Alliance."
             }
         },
         {
@@ -265,15 +273,23 @@
                 "description": "2nd place in the MSOE AI Club Discovery World hackathon"
             },
             "case_study": {
-                "context": "Discovery World needed a cost-effective, technology-based way to make exhibits more accessible. The project ran for 50 hours.",
+                "context": "Discovery World wanted a cost-effective, technology-based way to improve exhibit accessibility. During a 50-hour MSOE AI Club hackathon, our team explored a solution designed to require little effort from visitors.",
                 "my_role": "UX researcher and designer; presentation creator.",
                 "action": [
                     {
-                        "action_title": "Accessibility Research and Prototyping",
-                        "action_description": "Observed visitors using existing accessibility tools, consulted stakeholders, identified user needs, and prototyped a Bluetooth-locator chatbot with age-adjusted exhibit responses."
+                        "action_title": "Accessibility research",
+                        "action_description": "Visited Discovery World to observe and test existing accessibility tools, consulted stakeholders, and identified visitor needs and underrepresented groups the concept could serve."
+                    },
+                    {
+                        "action_title": "Solution design and prototyping",
+                        "action_description": "Sketched and wireframed a low-cost concept, then prototyped a chatbot that uses Bluetooth repeaters to locate visitors and tailor exhibit information to different ages."
+                    },
+                    {
+                        "action_title": "Presentation and handoff",
+                        "action_description": "Documented the design process in a presentation and handed the prototype to software engineers for implementation."
                     }
                 ],
-                "result": "The team earned second place with a low-cost accessibility concept designed to require little effort from visitors.",
+                "result": "The team earned second place with a seamless, cost-effective accessibility concept that was easy to implement and required little to no effort from visitors.",
                 "summary": "Designed an accessible, age-aware exhibit chatbot for Discovery World with the MSOE AI Club."
             }
         },
@@ -296,19 +312,27 @@
             "awards": 0,
             "impact": {
                 "value": null,
-                "description": "High-fidelity sustainable soap-bottle prototype; no quantified impact reported"
+                "description": "High-fidelity prototype refined through peer feedback and material testing"
             },
             "case_study": {
-                "context": "The 14-week industrial design project aimed to create a sustainable physical product ready for theoretical publication.",
+                "context": "For a 14-week industrial design project, I set out to take a sustainable physical product from initial research through a high-fidelity prototype ready for theoretical publication.",
                 "my_role": "Project owner, designer, and researcher.",
                 "action": [
                     {
-                        "action_title": "Product Research and Iteration",
-                        "action_description": "Researched comparable products, refined CAD and mold designs, 3D-printed molds, tested materials, and iterated from feedback."
+                        "action_title": "Research and concept development",
+                        "action_description": "Completed field and competitive research, sketched early concepts, refined the design digitally, and built a rough clay model."
+                    },
+                    {
+                        "action_title": "3D modeling and mold making",
+                        "action_description": "Created 3D models in SolidWorks and Autodesk Fusion 360, inverted the product design into a mold, and 3D-printed the mold."
+                    },
+                    {
+                        "action_title": "Material experimentation and iteration",
+                        "action_description": "Collected feedback from peers and professors, tested materials, identified design issues, and refined the product through repeated experiments, including work with flexible TPU molds."
                     }
                 ],
-                "result": "Created a high-fidelity prototype of a hand-soap bottle made from recycled hotel soaps, with a reusable soap outer bottle.",
-                "summary": "Designed a reusable hand-soap bottle made entirely from soap to reduce packaging waste."
+                "result": "Created a high-fidelity prototype of a hand-soap bottle made from recycled hotel soaps with a one-time-use pump. After the liquid soap is used, the outer bottle can be used as soap, avoiding a discarded plastic bottle.",
+                "summary": "Designed and prototyped a hand-soap bottle made from recycled hotel soaps, with an outer bottle that can be used as soap after the liquid is gone."
             }
         },
         {

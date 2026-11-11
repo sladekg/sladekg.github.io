@@ -23,7 +23,7 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
   if (projectIndex === -1 || !project) notFound();
 
   return (
-    <main className="project-page">
+    <main className="project-page case-study-page">
       <div className="hero-meta">
         <Link
           className="wordmark"
@@ -47,142 +47,120 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
         All projects
       </Link>
 
-      <header className="project-hero">
-        <div className="project-hero-inner">
-          <div className="project-hero-kicker">
-            <p className="project-eyebrow">Selected work / Case study</p>
-            <span className="project-file-number">
-              Case file {String(projectIndex + 1).padStart(2, "0")}
+      <header className="case-study-hero">
+        <div className="case-study-hero-inner">
+          <div className="case-study-cover">
+            <span className="case-study-cover-index">
+              Story {String(projectIndex + 1).padStart(2, "0")}
+            </span>
+            <span className="case-study-cover-initial" aria-hidden="true">
+              {project.title.slice(0, 1)}
+            </span>
+            <span className="case-study-cover-caption">
+              {project.topics[0]
+                ? formatTopic(project.topics[0])
+                : "Selected work"}
             </span>
           </div>
 
-          <div className="project-hero-grid">
-            <div className="project-hero-copy">
-              <h1>{project.title}</h1>
-              <p className="project-lede">{project.case_study.summary}</p>
-              <div className="project-topic-list" aria-label="Project disciplines">
-                {project.topics.map((topic) => (
-                  <span key={topic}>{formatTopic(topic)}</span>
-                ))}
+          <div className="case-study-hero-copy">
+            <p className="case-study-eyebrow">Selected work / Case study</p>
+            <h1>{project.title}</h1>
+            <div className="case-study-tldr">
+              <span>TL;DR</span>
+              <p>{project.case_study.summary}</p>
+            </div>
+            <dl className="case-study-meta">
+              <div>
+                <dt>My role</dt>
+                <dd>{project.case_study.my_role}</dd>
               </div>
-            </div>
-
-            <div className="project-cover-art" aria-hidden="true">
-              <span className="project-cover-orbit project-cover-orbit-one" />
-              <span className="project-cover-orbit project-cover-orbit-two" />
-              <svg
-                className="project-cover-line"
-                viewBox="0 0 360 260"
-                fill="none"
-                aria-hidden="true"
-              >
-                <path d="M12 190C73 18 115 236 183 122S289 18 348 70" />
-                <path d="M20 220C91 91 135 258 201 165S284 80 339 116" />
-              </svg>
-              <span className="project-cover-initial">
-                {project.title.slice(0, 1)}
-              </span>
-              <span className="project-cover-index">
-                {String(projectIndex + 1).padStart(2, "0")}
-              </span>
-              <span className="project-cover-caption">
-                <span>PROJECT FOCUS</span>
-                <strong>
-                  {project.topics[0] ? formatTopic(project.topics[0]) : "Design"}
-                </strong>
-              </span>
-            </div>
+              <div>
+                <dt>Focus</dt>
+                <dd>{project.topics.map(formatTopic).join(" · ")}</dd>
+              </div>
+            </dl>
           </div>
         </div>
       </header>
 
-      <section className="project-overview" aria-label="Project snapshot">
-        <div className="project-overview-heading">
-          <span>At a glance</span>
-          <span aria-hidden="true">✳</span>
-        </div>
-        <div className="project-facts">
-          <div>
-            <span className="project-fact-label">Role</span>
-            <span>{project.case_study.my_role}</span>
+      <article
+        className="case-study-story"
+        aria-label={`${project.title} case study`}
+      >
+        <section className="story-opening">
+          <div className="story-section-label">
+            <span>01</span>
+            <p>Background</p>
           </div>
-          <div>
-            <span className="project-fact-label">Disciplines</span>
-            <span>{project.topics.map(formatTopic).join(", ")}</span>
+          <div className="story-opening-copy">
+            <p className="story-overline">The challenge</p>
+            <h2>First, understand the problem.</h2>
+            <p className="story-body">{project.case_study.context}</p>
           </div>
-          <div>
-            <span className="project-fact-label">Awards</span>
-            <span>
-              {project.awards} {project.awards === 1 ? "award" : "awards"}
-            </span>
-          </div>
-        </div>
-      </section>
+        </section>
 
-      <section className="project-story" aria-label={`${project.title} case study`}>
-        <div className="project-story-heading">
-          <p>Inside the project</p>
-          <h2>From the first question to the final outcome.</h2>
-        </div>
-
-        <div className="project-narrative">
-          <section className="project-chapter project-chapter-context">
-            <div className="project-chapter-heading">
-              <span>01</span>
-              <h3>The challenge</h3>
-            </div>
-            <p>{project.case_study.context}</p>
-          </section>
-
-          <section className="project-chapter project-chapter-approach">
-            <div className="project-chapter-heading">
+        <section className="story-process" aria-labelledby="process-title">
+          <div className="story-process-heading">
+            <div className="story-section-label">
               <span>02</span>
-              <h3>The approach</h3>
+              <p>Process</p>
             </div>
-            <ul className="project-action-list">
-              {project.case_study.action.map((action) => (
-                <li key={action.action_title}>
-                  <h4>{action.action_title}</h4>
+            <div>
+              <p className="story-overline">From insight to action</p>
+              <h2 id="process-title">Designing a way forward.</h2>
+            </div>
+          </div>
+
+          <ol className="story-chapters">
+            {project.case_study.action.map((action, index) => (
+              <li className="story-chapter" key={action.action_title}>
+                <span className="story-chapter-number" aria-hidden="true">
+                  {String(index + 1).padStart(2, "0")}
+                </span>
+                <div>
+                  <h3>{action.action_title}</h3>
                   <p>{action.action_description}</p>
-                </li>
-              ))}
-            </ul>
-          </section>
+                </div>
+              </li>
+            ))}
+          </ol>
+        </section>
 
-          <section className="project-chapter project-chapter-outcome">
-            <div className="project-chapter-heading">
-              <span>03</span>
-              <h3>The outcome</h3>
+        <section className="story-outcome">
+          <div className="story-section-label">
+            <span>03</span>
+            <p>Outcome</p>
+          </div>
+          <div className="story-outcome-copy">
+            <p className="story-overline">Where the work led</p>
+            <h2>What changed.</h2>
+            <p className="story-body">{project.case_study.result}</p>
+
+            <div className="story-impact">
+              <span className="story-impact-label">Impact</span>
+              {project.impact.value && (
+                <strong>{project.impact.value}</strong>
+              )}
+              <p>{project.impact.description}</p>
             </div>
-            <div className="project-outcome-copy">
-              <p>{project.case_study.result}</p>
-              <div className="project-impact">
-                <span className="project-fact-label">Impact</span>
-                {project.impact.value && (
-                  <strong className="project-impact-value">
-                    {project.impact.value}
-                  </strong>
-                )}
-                <p>{project.impact.description}</p>
-              </div>
-            </div>
-          </section>
 
-          {project.presentation && (
-            <a
-              className="project-presentation-link"
-              href={project.presentation}
-              target="_blank"
-              rel="noreferrer"
-            >
-              <span>Explore the full presentation</span>
-              <span aria-hidden="true">↗</span>
-            </a>
-          )}
-        </div>
-      </section>
+            {project.presentation && (
+              <a
+                className="story-presentation-link"
+                href={project.presentation}
+                target="_blank"
+                rel="noreferrer"
+              >
+                <span>Explore the full presentation</span>
+                <span aria-hidden="true">↗</span>
+              </a>
+            )}
+          </div>
+        </section>
+      </article>
 
-      <footer className="project-page-footer">
+      <footer className="project-page-footer case-study-footer">
         <p>More thoughtful work, one story at a time.</p>
         <Link href="/#work">Back to all projects</Link>
       </footer>
