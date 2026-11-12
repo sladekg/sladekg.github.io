@@ -1,47 +1,14 @@
 import Link from "next/link";
-import { notFound } from "next/navigation";
-import portfolioContent from "../../../public/content.json";
-import { formatTopic, projectSlug, type Project } from "../../lib/portfolio";
+import { formatTopic, type Project } from "../lib/portfolio";
 
-const projects: Project[] = portfolioContent.projects;
-
-export function generateStaticParams() {
-  return projects.map((project) => ({ slug: projectSlug(project.title) }));
-}
-
-type ProjectPageProps = {
-  params: Promise<{ slug: string }>;
+type CaseStudyLayoutProps = {
+  project: Project;
+  index: number;
 };
 
-export default async function ProjectPage({ params }: ProjectPageProps) {
-  const { slug } = await params;
-  const projectIndex = projects.findIndex(
-    (item) => projectSlug(item.title) === slug,
-  );
-  const project = projects[projectIndex];
-
-  if (projectIndex === -1 || !project) notFound();
-
+export default function CaseStudyLayout({ project, index }: CaseStudyLayoutProps) {
   return (
-    <main className="project-page case-study-page">
-      <div className="hero-meta">
-        <Link
-          className="wordmark"
-          href="/"
-          aria-label="Gabrielle Sladek, home"
-        >
-          GMS<span>.</span>
-        </Link>
-        <nav className="project-main-nav" aria-label="Main navigation">
-          <div className="nav-actions">
-            <Link className="nav-button" href="/#work">Work</Link>
-            <Link className="nav-button" href="/#about">About</Link>
-            <Link className="nav-button" href="/#contact">Contact</Link>
-          </div>
-        </nav>
-        <span className="hero-location">Working everywhere</span>
-      </div>
-
+    <>
       <Link className="back-to-projects" href="/#work">
         <span aria-hidden="true">←</span>
         All projects
@@ -51,7 +18,7 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
         <div className="case-study-hero-inner">
           <div className="case-study-cover">
             <span className="case-study-cover-index">
-              Story {String(projectIndex + 1).padStart(2, "0")}
+              Story {String(index + 1).padStart(2, "0")}
             </span>
             <span className="case-study-cover-initial" aria-hidden="true">
               {project.title.slice(0, 1)}
@@ -113,10 +80,10 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
           </div>
 
           <ol className="story-chapters">
-            {project.case_study.action.map((action, index) => (
+            {project.case_study.action.map((action, stepIndex) => (
               <li className="story-chapter" key={action.action_title}>
                 <span className="story-chapter-number" aria-hidden="true">
-                  {String(index + 1).padStart(2, "0")}
+                  {String(stepIndex + 1).padStart(2, "0")}
                 </span>
                 <div>
                   <h3>{action.action_title}</h3>
@@ -159,11 +126,6 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
           </div>
         </section>
       </article>
-
-      <footer className="project-page-footer case-study-footer">
-        <p>More thoughtful work, one story at a time.</p>
-        <Link href="/#work">Back to all projects</Link>
-      </footer>
-    </main>
+    </>
   );
 }

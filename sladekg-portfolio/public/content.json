@@ -44,6 +44,86 @@
                 ],
                 "result": "Field testing showed the concept worked as intended and was entertaining and informative for visitors. The team won first place in the Hacksgiving hackathon.",
                 "summary": "Prototyped and field-tested an AI-powered visitor experience designed to support engagement and revenue at the Milwaukee Domes Alliance."
+            },
+            "story": {
+                "eyebrow": "Hacksgiving",
+                "tldr": [
+                    "Prototyped and field-tested an AI-powered visitor experience designed to support engagement and revenue at the Milwaukee Domes Alliance.",
+                    "Field testing showed the concept worked as intended. The team won first place in the Hacksgiving hackathon."
+                ],
+                "facts": [
+                    {
+                        "label": "My role",
+                        "value": "UX product designer and researcher; presenter."
+                    },
+                    {
+                        "label": "Timeline",
+                        "value": "50 hours"
+                    },
+                    {
+                        "label": "Tools",
+                        "value": "Figma"
+                    }
+                ],
+                "sections": [
+                    {
+                        "id": "background",
+                        "label": "Background",
+                        "title": "A weekend with the Domes",
+                        "paragraphs": [
+                            "The Milwaukee Domes Alliance wanted support for an upcoming renovation. Our team developed a concept during a 50-hour MSOE AI Club Hacksgiving hackathon."
+                        ]
+                    },
+                    {
+                        "id": "problem",
+                        "label": "Problem",
+                        "title": "Engagement, revenue, and a renovation",
+                        "paragraphs": [
+                            "The alliance wanted to increase visitor engagement and revenue while supporting its upcoming renovation."
+                        ]
+                    },
+                    {
+                        "id": "process",
+                        "label": "Process",
+                        "title": "From interviews to a field test",
+                        "subsections": [
+                            {
+                                "title": "Stakeholder and visitor research",
+                                "body": "Interviewed the CEO and education director, reviewed the current website and planned changes, and identified visitor use cases and opportunities to support the Domes."
+                            },
+                            {
+                                "title": "Concept design and prototyping",
+                                "body": "Sketched ideas in Microsoft Whiteboard and prototyped an AI-powered visitor experience in Figma, including Botanical Tales, Sip & Seek tours, and the Dome Detectives photo scavenger hunt."
+                            },
+                            {
+                                "title": "Field testing and presentation",
+                                "body": "Field-tested the interactive concept at the Domes, handed it off to software engineers for implementation, and prepared and presented a proposal to stakeholders and judges."
+                            }
+                        ]
+                    },
+                    {
+                        "id": "final-product",
+                        "label": "Final product",
+                        "title": "Three ways to visit",
+                        "paragraphs": [
+                            "The prototype combined Botanical Tales, Sip & Seek tours, and the Dome Detectives photo scavenger hunt."
+                        ]
+                    },
+                    {
+                        "id": "impact",
+                        "label": "Impact",
+                        "title": "First place.",
+                        "paragraphs": [
+                            "Field testing showed the concept worked as intended and was entertaining and informative for visitors. The team won first place in the Hacksgiving hackathon."
+                        ],
+                        "stats": [
+                            {
+                                "value": "1st",
+                                "label": "place at the MSOE AI Club Hacksgiving hackathon"
+                            }
+                        ]
+                    }
+                ]
             }
         },
         {
@@ -102,7 +182,92 @@
                     }
                 ],
                 "result": "One unified, scalable tool replaced several outdated tools for configuring, monitoring, and analyzing excitation systems. Configuration time decreased by about 50%. Engineers can analyze historical fault events in the same oscilloscope interface they use live, shortening root-cause analysis from hours to minutes. Consistent patterns across all pages reduce training time for new technicians and lower the risk of operator error on live equipment. The product gives L & S a modern, branded software experience to pair with their hardware in customer sales.",
-                "summary": "Lorem ipsum"
+                "summary": "One unified tool replaced several outdated tools for configuring, monitoring, and analyzing excitation systems, and cut configuration time by about 50%."
+            },
+            "story": {
+                "eyebrow": "L & S Electric",
+                "tldr": [
+                    "L & S Electric needed a modern desktop app for configuring and controlling its AES-110 and AES-1100 hydro-electric power excitation systems.",
+                    "One unified tool replaced several outdated tools, and configuration time decreased by about 50%."
+                ],
+                "facts": [
+                    {
+                        "label": "My role",
+                        "value": "Lead User Experience Designer, Researcher, and Writer"
+                    }
+                ],
+                "sections": [
+                    {
+                        "id": "background",
+                        "label": "Background",
+                        "title": "A tool for live power equipment",
+                        "paragraphs": [
+                            "L & S Electric needed a modern desktop app for configuring and controlling its AES-110 and AES-1100 hydro-electric power excitation systems. The users are electrical engineers and field technicians, both inside and outside of L & S Electric, working live with power generation equipment.",
+                            "The app had to combine real-time metering, a multi-channel oscilloscope, COMTRADE fault-file analysis, synchroscope and capability curve displays, and automated control sequences."
+                        ]
+                    },
+                    {
+                        "id": "problem",
+                        "label": "Problem",
+                        "title": "A misread value has consequences",
+                        "paragraphs": [
+                            "A misread value or a mis-click has drastic consequences when the equipment is live. The work replaced several outdated tools for configuring, monitoring, and analyzing excitation systems."
+                        ]
+                    },
+                    {
+                        "id": "process",
+                        "label": "Process",
+                        "title": "Designed with the people who use it",
+                        "subsections": [
+                            {
+                                "title": "Stakeholder research",
+                                "body": "I ran working sessions with L & S electrical engineers to understand how they commission, tune, and troubleshoot excitation systems, and which readings they need side by side during each task. I also shadowed a technician through a commissioning workflow on the legacy tool."
+                            },
+                            {
+                                "title": "Information architecture",
+                                "body": "I organized screens into task-based modes — configuration, monitoring, control, and fault analysis — so engineers could move between them without losing context. A/B testing with 4 to 5 engineers shaped the navigation."
+                            },
+                            {
+                                "title": "Interaction design for high-stakes control",
+                                "body": "I designed the auto-control and sequence screens with clear state indicators, confirmation steps for irreversible commands, and consistent placement of critical readings, following L & S's own accessibility and HMI standards."
+                            },
+                            {
+                                "title": "Data visualization",
+                                "body": "I designed the oscilloscope and COMTRADE views — channel toggles, zoom bands, and RMS, frequency, and phase measurement readouts — so engineers could isolate a fault window quickly."
+                            },
+                            {
+                                "title": "Design system",
+                                "body": "I created a reusable component library of gauges, metering tiles, and alarm states that let development scale consistently."
+                            },
+                            {
+                                "title": "Validation",
+                                "body": "I reviewed builds with engineers each iteration and refined layouts based on what they actually looked for first, conducting usability walkthroughs at roughly every two to four weeks. I also experimented with field testing during QA testing for AES-110s."
+                            }
+                        ]
+                    },
+                    {
+                        "id": "final-product",
+                        "label": "Final product",
+                        "title": "One tool for the whole job",
+                        "paragraphs": [
+                            "One unified, scalable tool replaced several outdated tools for configuring, monitoring, and analyzing excitation systems. Engineers can analyze historical fault events in the same oscilloscope interface they use live."
+                        ]
+                    },
+                    {
+                        "id": "impact",
+                        "label": "Impact",
+                        "title": "Faster to configure, faster to diagnose",
+                        "paragraphs": [
+                            "Engineers can analyze historical fault events in the same oscilloscope interface they use live, shortening root-cause analysis from hours to minutes. Consistent patterns across all pages reduce training time for new technicians and lower the risk of operator error on live equipment. The product gives L & S a modern, branded software experience to pair with their hardware in customer sales."
+                        ],
+                        "stats": [
+                            {
+                                "value": "50%",
+                                "label": "less configuration time through my workflow redesigns"
+                            }
+                        ]
+                    }
+                ]
             }
         },
         {
@@ -291,31 +456,108 @@
                 ],
                 "result": "The team earned second place with a seamless, cost-effective accessibility concept that was easy to implement and required little to no effort from visitors.",
                 "summary": "Designed an accessible, age-aware exhibit chatbot for Discovery World with the MSOE AI Club."
+            },
+            "story": {
+                "eyebrow": "MSOE AI Club",
+                "tldr": [
+                    "Designed an accessible, age-aware exhibit chatbot for Discovery World with the MSOE AI Club.",
+                    "The team earned second place with a low-cost concept designed to require little effort from visitors."
+                ],
+                "facts": [
+                    {
+                        "label": "My role",
+                        "value": "UX researcher and designer; presentation creator."
+                    },
+                    {
+                        "label": "Timeline",
+                        "value": "50 hours"
+                    },
+                    {
+                        "label": "Team",
+                        "value": "MSOE AI Club"
+                    }
+                ],
+                "sections": [
+                    {
+                        "id": "background",
+                        "label": "Background",
+                        "title": "Fifty hours at Discovery World",
+                        "paragraphs": [
+                            "The project ran for 50 hours with the MSOE AI Club."
+                        ]
+                    },
+                    {
+                        "id": "problem",
+                        "label": "Problem",
+                        "title": "Exhibits that more people can use",
+                        "paragraphs": [
+                            "Discovery World needed a cost-effective, technology-based way to make exhibits more accessible."
+                        ]
+                    },
+                    {
+                        "id": "process",
+                        "label": "Process",
+                        "title": "Watch first, then prototype",
+                        "subsections": [
+                            {
+                                "title": "Accessibility research and prototyping",
+                                "body": "Observed visitors using existing accessibility tools, consulted stakeholders, identified user needs, and prototyped a Bluetooth-locator chatbot with age-adjusted exhibit responses."
+                            }
+                        ]
+                    },
+                    {
+                        "id": "final-product",
+                        "label": "Final product",
+                        "title": "A chatbot that meets the visitor's age",
+                        "paragraphs": [
+                            "The concept was a Bluetooth-locator chatbot with age-adjusted exhibit responses, designed to require little effort from visitors."
+                        ]
+                    },
+                    {
+                        "id": "impact",
+                        "label": "Impact",
+                        "title": "Second place.",
+                        "paragraphs": [
+                            "The team earned second place with a low-cost accessibility concept."
+                        ],
+                        "stats": [
+                            {
+                                "value": "2nd",
+                                "label": "place in the MSOE AI Club Discovery World hackathon"
+                            }
+                        ]
+                    }
+                ]
             }
         },
         {
             "title": "Soap Bottle Made of Soap",
             "topics": [
-                "product_design"
+                "product_design",
+                "product_strategy"
             ],
             "images": [
                 {
-                    "src": "/images/soapbottle-1.png",
-                    "alt": "Soap Bottle Made of Soap"
+                    "src": "/images/soapbottle-hero.jpg",
+                    "alt": "A square soap bottle in light pink with rounded edges and an embossed earth mark in the center."
                 },
                 {
-                    "src": "/images/soapbottle-2.png",
-                    "alt": "Soap Bottle Made of Soap"
+                    "src": "/images/soapbottle-process.jpg",
+                    "alt": "Collage of CAD renders, mold printing, and material tests from the soap bottle process."
+                },
+                {
+                    "src": "/images/soapbottle-product-angles.jpg",
+                    "alt": "The final soap bottle prototype shown from the top, bottom, sides, and an isometric angle."
                 }
             ],
             "presentation": "/pdfs/soap-bottle.pdf",
             "awards": 0,
             "impact": {
-                "value": null,
-                "description": "High-fidelity prototype refined through peer feedback and material testing"
+                "value": "2-in-1",
+                "description": "One purchase is the liquid soap and the bar. The pump is bought once. Nothing plastic is left to throw away."
             },
             "case_study": {
-                "context": "For a 14-week industrial design project, I set out to take a sustainable physical product from initial research through a high-fidelity prototype ready for theoretical publication.",
+                "context": "Liquid soap is easy and wasteful. A bar is lower waste, and easy to give up on. Hotels throw away half-used bars every day. Over 14 weeks, the brief was a physical product that could be published.",
                 "my_role": "Project owner, designer, and researcher.",
                 "action": [
                     {
@@ -331,8 +573,124 @@
                         "action_description": "Collected feedback from peers and professors, tested materials, identified design issues, and refined the product through repeated experiments, including work with flexible TPU molds."
                     }
                 ],
-                "result": "Created a high-fidelity prototype of a hand-soap bottle made from recycled hotel soaps with a one-time-use pump. After the liquid soap is used, the outer bottle can be used as soap, avoiding a discarded plastic bottle.",
-                "summary": "Designed and prototyped a hand-soap bottle made from recycled hotel soaps, with an outer bottle that can be used as soap after the liquid is gone."
+                "result": "A high-fidelity soap bottle: liquid soap inside, and the bottle itself becomes the bar. The pump is bought once and kept, and the material is recycled hotel soap.",
+                "summary": "A hand-soap bottle you use, then wash with. The container is the next bar, so the product leaves no plastic behind."
+            },
+            "story": {
+                "eyebrow": "Industrial design",
+                "tldr": [
+                    "A hand-soap bottle you use, then wash with. The container is the next bar, so the product leaves no plastic behind.",
+                    "Solo work, 14 weeks, from research through a high-fidelity prototype."
+                ],
+                "facts": [
+                    {
+                        "label": "My role",
+                        "value": "Project owner, designer, and researcher."
+                    },
+                    {
+                        "label": "Timeline",
+                        "value": "14 weeks"
+                    },
+                    {
+                        "label": "Team",
+                        "value": "Solo"
+                    },
+                    {
+                        "label": "Tools",
+                        "value": "SolidWorks, Fusion 360, and flexible TPU"
+                    }
+                ],
+                "sections": [
+                    {
+                        "id": "background",
+                        "label": "Background",
+                        "title": "A product that could be published",
+                        "paragraphs": [
+                            "The brief was a physical product that could be published, taken from an idea to a finished prototype. It was a 14-week industrial design project, and the first one I took on without a team."
+                        ]
+                    },
+                    {
+                        "id": "problem",
+                        "label": "Problem",
+                        "title": "Convenience that leaves a bottle behind",
+                        "paragraphs": [
+                            "Liquid soap is easy and wasteful. A bar is lower waste, and easy to give up on. Hotels throw away half-used bars every day."
+                        ],
+                        "quote": "How do you sell zero waste as the more convenient choice?"
+                    },
+                    {
+                        "id": "process",
+                        "label": "Process",
+                        "title": "From a sketch to a mold",
+                        "images": [
+                            {
+                                "src": "/images/soapbottle-process.jpg",
+                                "alt": "Collage of CAD renders, mold printing, and material tests from the soap bottle process."
+                            }
+                        ],
+                        "subsections": [
+                            {
+                                "title": "Field and competitive research",
+                                "body": "I started by looking at comparable products and the waste around them, then kept a presentation journal of the decisions as the work moved."
+                            },
+                            {
+                                "title": "Sketches and a clay model",
+                                "body": "Rough sketches and a clay model settled the form before it went into CAD."
+                            },
+                            {
+                                "title": "SolidWorks, then Fusion 360",
+                                "body": "A convex body fits the hand and still reads as a bar once the liquid is gone. An embossed earth mark carries the brand."
+                            },
+                            {
+                                "title": "Critique, kept visible",
+                                "body": "Peers and professors reviewed the work at each pass, and those reviews stayed in the presentation so each decision remained visible."
+                            },
+                            {
+                                "title": "A mold, then melted hotel soap",
+                                "body": "I inverted the model into a mold, 3D printed it in flexible TPU, and tested it with melted hotel soap. When consistency, the melt, or the embossing failed, I named the issue, tried a fix, and refined."
+                            }
+                        ]
+                    },
+                    {
+                        "id": "final-product",
+                        "label": "Final product",
+                        "title": "The bottle is the next bar",
+                        "quote": "Have liquid hand soap inside of the bottle and use the bottle itself once the liquid is gone.",
+                        "images": [
+                            {
+                                "src": "/images/soapbottle-product-angles.jpg",
+                                "alt": "The final soap bottle prototype shown from the top, bottom, sides, and an isometric angle."
+                            }
+                        ],
+                        "paragraphs": [
+                            "The pump is bought once and kept. The packaging is compostable. The form is simple enough for a minimalist home, and the soap is gentle enough for sensitive skin.",
+                            "The prototype is a high-fidelity soap bottle with rounded edges and the earth mark pressed into the face."
+                        ]
+                    },
+                    {
+                        "id": "impact",
+                        "label": "Impact",
+                        "title": "What the purchase actually is",
+                        "paragraphs": [
+                            "The customer buys a new soap bottle and keeps the pump. The empty bottle is the next bar, so the refill does not leave a container. The material is soap a hotel would have discarded, and the outer pack can be composted."
+                        ],
+                        "stats": [
+                            {
+                                "value": "2-in-1",
+                                "label": "One purchase is the liquid soap and the bar. The pump is bought once. Nothing plastic is left to throw away."
+                            }
+                        ]
+                    },
+                    {
+                        "id": "reflections",
+                        "label": "Reflections",
+                        "title": "What I would change next",
+                        "paragraphs": [
+                            "Making soap is harder than it looks. Learning to 3D print the mold was trial and error, and keeping a journal of the progress mattered.",
+                            "Next I would use a stovetop to melt the soap, add soap base for a richer consistency, and press the logo with a heated metal stamp. I hoped to fund that next round through my university."
+                        ]
+                    }
+                ]
             }
         },
         {
