@@ -379,12 +379,18 @@ textarea:focus-visible {
   line-height: 0.92;
 }
 
-.work-intro {
-  max-width: 510px;
+.section-deck {
+  max-width: 32rem;
   margin: 18px 0 0;
-  color: #51462f;
+  font-family: var(--sans);
   font-size: 14px;
+  font-weight: 400;
+  letter-spacing: 0.005em;
   line-height: 1.7;
+}
+
+.work-intro {
+  color: #51462f;
 }
 
 .heading-period {
@@ -920,7 +926,7 @@ textarea:focus-visible {
 
 .contact-heading h2 {
   max-width: 720px;
-  margin: 10px 0 12px;
+  margin: 10px 0 0;
   font-family: var(--font-dm-serif-display), serif;
   font-size: clamp(50px, 7vw, 84px);
   font-weight: 400;
@@ -930,7 +936,6 @@ textarea:focus-visible {
   color: #fffaf0;
 }
 
-.contact-intro,
 .contact-panel-copy,
 .resume-note {
   color: var(--muted);
@@ -939,8 +944,6 @@ textarea:focus-visible {
 }
 
 .contact-intro {
-  max-width: 470px;
-  margin: 0;
   color: #e9e8ff;
 }
 

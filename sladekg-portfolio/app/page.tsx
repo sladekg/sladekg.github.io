@@ -180,9 +180,8 @@ export default function Home() {
             <h2 id="work-title">
               A few things I&apos;ve made<span className="heading-period">.</span>
             </h2>
-            <p className="work-intro">
-              Product design, strategy, research, and the details that bring
-              each project together.
+            <p className="section-deck work-intro">
+              What I&apos;ve been up to lately.
             </p>
           </div>
         </div>
@@ -295,9 +294,8 @@ export default function Home() {
             Let&apos;s make something meaningful
             <span className="heading-period">.</span>
           </h2>
-          <p className="contact-intro">
-            Have a project, a question, or just want to say hello? I&apos;d love
-            to hear from you.
+          <p className="section-deck contact-intro">
+            Stick around and reach out!
           </p>
         </div>
 
