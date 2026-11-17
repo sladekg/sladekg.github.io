@@ -11,12 +11,32 @@
             ],
             "images": [
                 {
-                    "src": "/images/mke-domes-1.png",
-                    "alt": "MKE Domes"
+                    "src": "/images/mke-domes-welcome.png",
+                    "alt": "Phone screen titled Welcome to the Domes. It asks which environment to explore. The choices are The Arid Dome, The Tropical Dome, and The Floral Dome. The bottom bar has Botanical Tales, Dome Detective, and Sip And Seek."
                 },
                 {
-                    "src": "/images/mke-domes-2.png",
-                    "alt": "MKE Domes"
+                    "src": "/images/mke-domes-botanical-tales.png",
+                    "alt": "Phone screen for the Madagascar Collection in Botanical Tales. A photo of pink flowers sits above a story about the dry winds of Madagascar. A blue stop button is in the center, and Botanical Tales is selected in the bottom bar."
+                },
+                {
+                    "src": "/images/mke-domes-dome-detective.png",
+                    "alt": "Phone screen for Dome Detective. The text asks the visitor to identify plants using clues. A cartoon detective stands in front of the Domes above a Let's Go button. Dome Detective is selected in the bottom bar."
+                },
+                {
+                    "src": "/images/mke-domes-sip-and-seek.png",
+                    "alt": "Phone screen for Sip and Seek. The text says to buy food or a beverage from the cafe, then scan a barcode. Four featured beverage photos sit above a Scan button. Sip And Seek is selected in the bottom bar."
+                },
+                {
+                    "src": "/images/mke-domes-field-start.jpg",
+                    "alt": "Two hands hold a phone in the Domes, in front of coleus and white poinsettias. A finger is about to tap Let's Go on the Dome Detective start screen."
+                },
+                {
+                    "src": "/images/mke-domes-field-clue.jpg",
+                    "alt": "A hand holds a phone inside a glass dome. Dome Detective asks for a rosette of thick, spiky, silvery-blue leaves. The buttons read Get Another Hint and I Think I Found It."
+                },
+                {
+                    "src": "/images/mke-domes-field-scan.jpg",
+                    "alt": "A hand holds a phone in front of red poinsettias. Dome Detective says to point the camera at the plant that was found. The screen shows a photo of pink poinsettias above a Scan button."
                 }
             ],
             "presentation": "/pdfs/mke-domes.pdf",
@@ -85,7 +105,7 @@
                     {
                         "id": "process",
                         "label": "Process",
-                        "title": "From interviews to a field test",
+                        "title": "From interviews to a prototype",
                         "subsections": [
                             {
                                 "title": "Stakeholder and visitor research",
@@ -94,19 +114,53 @@
                             {
                                 "title": "Concept design and prototyping",
                                 "body": "Sketched ideas in Microsoft Whiteboard and prototyped an AI-powered visitor experience in Figma, including Botanical Tales, Sip & Seek tours, and the Dome Detectives photo scavenger hunt."
+                            }
+                        ]
+                    },
+                    {
+                        "id": "field-test",
+                        "label": "Field test",
+                        "title": "Tried inside the glass houses",
+                        "images": [
+                            {
+                                "src": "/images/mke-domes-field-start.jpg",
+                                "alt": "Two hands hold a phone in the Domes, in front of coleus and white poinsettias. A finger is about to tap Let's Go on the Dome Detective start screen."
                             },
                             {
-                                "title": "Field testing and presentation",
-                                "body": "Field-tested the interactive concept at the Domes, handed it off to software engineers for implementation, and prepared and presented a proposal to stakeholders and judges."
+                                "src": "/images/mke-domes-field-clue.jpg",
+                                "alt": "A hand holds a phone inside a glass dome. Dome Detective asks for a rosette of thick, spiky, silvery-blue leaves. The buttons read Get Another Hint and I Think I Found It."
+                            },
+                            {
+                                "src": "/images/mke-domes-field-scan.jpg",
+                                "alt": "A hand holds a phone in front of red poinsettias. Dome Detective says to point the camera at the plant that was found. The screen shows a photo of pink poinsettias above a Scan button."
                             }
+                        ],
+                        "paragraphs": [
+                            "We tested Dome Detective in the Domes. The phone gave a plant clue, then asked for a photo of the plant that was found.",
+                            "After the test, the prototype went to software engineers, and the team presented the proposal to stakeholders and judges."
                         ]
                     },
                     {
                         "id": "final-product",
                         "label": "Final product",
                         "title": "Three ways to visit",
+                        "images": [
+                            {
+                                "src": "/images/mke-domes-botanical-tales.png",
+                                "alt": "Phone screen for the Madagascar Collection in Botanical Tales. A photo of pink flowers sits above a story about the dry winds of Madagascar. A blue stop button is in the center, and Botanical Tales is selected in the bottom bar."
+                            },
+                            {
+                                "src": "/images/mke-domes-dome-detective.png",
+                                "alt": "Phone screen for Dome Detective. The text asks the visitor to identify plants using clues. A cartoon detective stands in front of the Domes above a Let's Go button. Dome Detective is selected in the bottom bar."
+                            },
+                            {
+                                "src": "/images/mke-domes-sip-and-seek.png",
+                                "alt": "Phone screen for Sip and Seek. The text says to buy food or a beverage from the cafe, then scan a barcode. Four featured beverage photos sit above a Scan button. Sip And Seek is selected in the bottom bar."
+                            }
+                        ],
                         "paragraphs": [
-                            "The prototype combined Botanical Tales, Sip & Seek tours, and the Dome Detectives photo scavenger hunt."
+                            "The prototype combined Botanical Tales, Sip & Seek tours, and the Dome Detectives photo scavenger hunt.",
+                            "The home screen asks which dome to explore. Botanical Tales reads a plant story aloud. Dome Detective starts a plant identification. Sip & Seek starts after a cafe purchase, when the visitor scans a barcode."
                         ]
                     },
                     {
@@ -805,44 +859,6 @@
                         ]
                     }
                 ]
-            }
-        },
-        {
-            "title": "Phos Tech",
-            "topics": [
-                "accessibility",
-                "product_strategy",
-                "project_management",
-                "stakeholder_interviews",
-                "user_research"
-            ],
-            "images": [
-                {
-                    "src": "/images/phostech-1.png",
-                    "alt": "Phos Tech"
-                },
-                {
-                    "src": "/images/phostech-2.png",
-                    "alt": "Phos Tech"
-                }
-            ],
-            "presentation": "/pdfs/phos-tech.pdf",
-            "awards": 0,
-            "impact": {
-                "value": "0",
-                "description": "Results coming soon"
-            },
-            "case_study": {
-                "context": "Lorem ipsum",
-                "my_role": "Lorem ipsum",
-                "action": [
-                    {
-                        "action_title": "Project work",
-                        "action_description": "Lorem ipsum"
-                    }
-                ],
-                "result": "Lorem ipsum",
-                "summary": "Lorem ipsum"
             }
         }
     ]

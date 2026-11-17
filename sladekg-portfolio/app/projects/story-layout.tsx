@@ -2,12 +2,90 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { useEffect, useState } from "react";
-import { formatTopic, type Project, type ProjectStory } from "../lib/portfolio";
+import { useEffect, useRef, useState } from "react";
+import {
+  formatTopic,
+  type Project,
+  type ProjectStory,
+  type StoryImage,
+} from "../lib/portfolio";
 
 type StoryLayoutProps = {
   project: Project & { story: ProjectStory };
 };
+
+function StoryGallery({ images }: { images: StoryImage[] }) {
+  const dialogRef = useRef<HTMLDialogElement>(null);
+  const [open, setOpen] = useState<StoryImage | null>(null);
+
+  function enlarge(image: StoryImage) {
+    const dialog = dialogRef.current;
+    if (!dialog || dialog.open) return;
+    setOpen(image);
+    dialog.showModal();
+  }
+
+  function close() {
+    dialogRef.current?.close();
+    setOpen(null);
+  }
+
+  return (
+    <>
+      <div className="story-gallery">
+        {images.map((image) => (
+          <figure key={image.src} className="story-figure">
+            <Image
+              src={image.src}
+              alt={image.alt}
+              width={720}
+              height={480}
+              sizes="(max-width: 760px) 340px, 460px"
+            />
+            <button
+              type="button"
+              className="story-enlarge"
+              aria-label="Enlarge"
+              onClick={() => enlarge(image)}
+            >
+              <svg className="story-icon" viewBox="0 0 16 16" aria-hidden="true">
+                <circle cx="7" cy="7" r="4.25" />
+                <path d="M10.2 10.2 13.25 13.25" />
+              </svg>
+            </button>
+          </figure>
+        ))}
+      </div>
+      <dialog
+        ref={dialogRef}
+        className="story-lightbox"
+        onClose={() => setOpen(null)}
+        onClick={(event) => {
+          if (event.target === dialogRef.current) close();
+        }}
+      >
+        {open && (
+          <>
+            <button
+              type="button"
+              className="story-lightbox-close"
+              aria-label="Close"
+              onClick={close}
+            >
+              <svg className="story-icon" viewBox="0 0 16 16" aria-hidden="true">
+                <path d="M4 4 12 12" />
+                <path d="M12 4 4 12" />
+              </svg>
+            </button>
+            {/* The enlarged view uses the original file so it is not cropped by the thumbnail size. */}
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img src={open.src} alt={open.alt} />
+          </>
+        )}
+      </dialog>
+    </>
+  );
+}
 
 export default function StoryLayout({ project }: StoryLayoutProps) {
   const { story } = project;
@@ -140,17 +218,9 @@ export default function StoryLayout({ project }: StoryLayoutProps) {
               </span>
               <div className="story-step-body">
                 <h2>{section.title}</h2>
-                {section.images?.map((image) => (
-                  <figure key={image.src} className="story-figure">
-                    <Image
-                      src={image.src}
-                      alt={image.alt}
-                      width={720}
-                      height={480}
-                      sizes="(max-width: 760px) 88vw, 720px"
-                    />
-                  </figure>
-                ))}
+                {section.images && section.images.length > 0 && (
+                  <StoryGallery images={section.images} />
+                )}
                 {section.quote && <blockquote>{section.quote}</blockquote>}
                 {section.paragraphs?.map((paragraph) => (
                   <p key={paragraph}>{paragraph}</p>
