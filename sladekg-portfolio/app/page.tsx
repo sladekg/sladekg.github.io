@@ -2,6 +2,7 @@
 
 import { useEffect, useRef, useState, type FormEvent } from "react";
 import CaseStudyCard from "./components/case-study-card";
+import MobileNav from "./components/mobile-nav";
 import type { Project } from "./lib/portfolio";
 
 const contactEmail = "gabriellemsladek@gmail.com";
@@ -82,8 +83,11 @@ export default function Home() {
 
     const apply = () => {
       frame = 0;
-      const stackAt =
-        nav instanceof HTMLElement ? Math.max(nav.offsetTop, 1) : 1;
+      const navVisible =
+        nav instanceof HTMLElement && getComputedStyle(nav).display !== "none";
+      const stackAt = navVisible
+        ? Math.max(nav.offsetTop, 1)
+        : Math.max(hero.offsetTop + hero.offsetHeight, 1);
       const progress = Math.min(1, Math.max(0, window.scrollY / stackAt));
       const channel = (from: number, to: number) =>
         Math.round(from + (to - from) * progress);
@@ -122,13 +126,16 @@ export default function Home() {
   return (
     <main>
       <div className="hero-meta">
-        <a
-          className="wordmark"
-          href="#top"
-          aria-label="Gabrielle Sladek, home"
-        >
-          GMS<span>.</span>
-        </a>
+        <div className="hero-brand">
+          <a
+            className="wordmark"
+            href="#top"
+            aria-label="Gabrielle Sladek, home"
+          >
+            GMS<span>.</span>
+          </a>
+          <MobileNav />
+        </div>
         <span className="hero-location">Working everywhere</span>
       </div>
 

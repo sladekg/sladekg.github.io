@@ -85,6 +85,77 @@ textarea:focus-visible {
   text-transform: uppercase;
 }
 
+.hero-brand {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+}
+
+.mobile-nav {
+  display: none;
+}
+
+.mobile-nav-toggle {
+  display: grid;
+  width: 44px;
+  height: 44px;
+  align-content: center;
+  justify-content: center;
+  gap: 5px;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: var(--ink);
+  cursor: pointer;
+}
+
+.mobile-nav-toggle span {
+  display: block;
+  width: 18px;
+  height: 1.5px;
+  background: currentColor;
+  transition: transform 160ms ease, opacity 160ms ease;
+}
+
+.mobile-nav-toggle[aria-expanded="true"] span:nth-child(1) {
+  transform: translateY(6.5px) rotate(45deg);
+}
+
+.mobile-nav-toggle[aria-expanded="true"] span:nth-child(2) {
+  opacity: 0;
+}
+
+.mobile-nav-toggle[aria-expanded="true"] span:nth-child(3) {
+  transform: translateY(-6.5px) rotate(-45deg);
+}
+
+.mobile-nav-panel {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  left: 0;
+  z-index: 40;
+  display: grid;
+  padding: 6px 6vw 14px;
+  background: #fbf8f0;
+  border-bottom: 1px solid var(--line);
+}
+
+.hero-meta .mobile-nav-panel a {
+  padding: 14px 4px;
+  color: var(--ink);
+  font-family: var(--font-dm-sans), sans-serif;
+  font-size: 16px;
+  font-weight: 550;
+  letter-spacing: -0.035em;
+  line-height: 1.3;
+  text-transform: none;
+}
+
+.hero-meta .mobile-nav-panel a:active {
+  color: #525bc7;
+}
+
 .wordmark {
   color: var(--ink);
   font-family: var(--serif);
@@ -253,6 +324,8 @@ textarea:focus-visible {
   cursor: pointer;
   font-size: 11px;
   font-weight: 550;
+  touch-action: manipulation;
+  -webkit-tap-highlight-color: transparent;
   transition:
     border-color 180ms ease,
     background 180ms ease,
@@ -275,9 +348,7 @@ textarea:focus-visible {
   letter-spacing: -0.035em;
 }
 
-.nav-button:hover,
 .nav-button:focus-visible,
-.project-main-nav .nav-button:hover,
 .project-main-nav .nav-button:focus-visible {
   border-color: #525bc7;
   background: #525bc7;
@@ -290,6 +361,25 @@ textarea:focus-visible {
   border-color: var(--ink);
   background: var(--ink);
   color: #fff;
+  transform: none;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .nav-button:hover,
+  .project-main-nav .nav-button:hover {
+    border-color: #525bc7;
+    background: #525bc7;
+    color: #fff;
+    transform: scale(1.04);
+  }
+
+  .nav-button:hover:active,
+  .project-main-nav .nav-button:hover:active {
+    border-color: var(--ink);
+    background: var(--ink);
+    color: #fff;
+    transform: none;
+  }
 }
 
 .folder-tabs {
@@ -1717,8 +1807,22 @@ textarea:focus-visible {
 
 @media (max-width: 760px) {
   .hero {
-    min-height: calc(92svh - 140px);
-    padding: 0 6vw 70px;
+    min-height: calc(92svh - 70px);
+    padding: 0 6vw;
+  }
+
+  .hero-brand {
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .mobile-nav {
+    display: block;
+  }
+
+  .folder-nav,
+  .project-main-nav {
+    display: none;
   }
 
   .hero-meta {
