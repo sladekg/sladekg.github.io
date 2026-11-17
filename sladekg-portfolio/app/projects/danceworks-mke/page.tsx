@@ -1,9 +1,9 @@
 import { notFound } from "next/navigation";
-import CaseStudyLayout from "../case-study-layout";
-import { getProject } from "../../lib/portfolio";
+import StoryLayout from "../story-layout";
+import { getProject, hasStory } from "../../lib/portfolio";
 
 export default function Page() {
   const entry = getProject("danceworks-mke");
-  if (!entry) notFound();
-  return <CaseStudyLayout project={entry.project} index={entry.index} />;
+  if (!entry || !hasStory(entry.project)) notFound();
+  return <StoryLayout project={entry.project} />;
 }

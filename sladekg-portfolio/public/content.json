@@ -348,31 +348,145 @@
             ],
             "images": [
                 {
-                    "src": "/images/danceworks-1.png",
-                    "alt": "Danceworks MKE"
+                    "src": "/images/danceworks-1.jpg",
+                    "alt": "Presentation slide titled Needs Improvement. Desktop PageSpeed scored 58, with largest contentful paint at 2.7 seconds. Mobile scored 44, with largest contentful paint at 3 seconds. Both failed the Core Web Vitals assessment."
                 },
                 {
-                    "src": "/images/danceworks-2.png",
-                    "alt": "Danceworks MKE"
+                    "src": "/images/danceworks-2.jpg",
+                    "alt": "Closing slide. Strengths listed are sitemaps, SSL certification, and accessibility. Items that need improvement are 4XX errors, Core Web Vitals performance, code efficiency, keywords, and broken links."
                 }
             ],
             "presentation": "",
             "awards": 0,
             "impact": {
-                "value": "0",
-                "description": "Results coming soon"
+                "value": "77",
+                "description": "broken links from other sites, with 301 redirects recommended"
             },
             "case_study": {
-                "context": "Lorem ipsum",
-                "my_role": "Lorem ipsum",
+                "context": "Danceworks, Inc. is a 501(c)(3) nonprofit founded in 1992. Its mission is to enhance joy, health, and creativity by engaging the community through dance. People use danceworksmke.org to find classes, performances, and ways to support the organization. In February 2026, for UXD3050, I audited the site's technical SEO and prepared a presentation of the findings for Danceworks.",
+                "my_role": "Technical SEO auditor and presenter.",
                 "action": [
                     {
-                        "action_title": "Project work",
-                        "action_description": "Lorem ipsum"
+                        "action_title": "Crawl and index review",
+                        "action_description": "I checked robots.txt, schema, and the XML sitemaps. The site is WordPress. robots.txt disallows /wp-admin/ and allows /wp-admin/admin-ajax.php. Schema.org reported no errors and detected two items. I recommended Organization, Event, and LocalBusiness schema, with clearer name, description, and about text. Two sitemaps were valid. One was the homepage. The other listed 32 URLs and was updated regularly. Screaming Frog found no orphan pages."
+                    },
+                    {
+                        "action_title": "Links, metadata, and keywords",
+                        "action_description": "Ahrefs found 0 broken links on the site and 77 broken links from other sites pointing at it. I recommended 301 redirects through a WordPress redirect plugin or the server, then a recrawl in Ahrefs or Screaming Frog. Screaming Frog found 6 internal 404s and 25 responses in the 4XX range. Two meta descriptions were missing. Page titles and meta descriptions were not duplicated. Twenty-four keywords were configured, and none of them appeared in the page content."
+                    },
+                    {
+                        "action_title": "Speed, mobile use, and security",
+                        "action_description": "PageSpeed Insights scored performance at 58 on desktop and 44 on mobile. Both failed the Core Web Vitals assessment. Desktop largest contentful paint was 2.7 seconds. Mobile largest contentful paint was 3 seconds, and mobile time to first byte was also flagged. Cumulative layout shift was 0. Mobile accessibility scored between 91 and 100 in PageSpeed Insights and Lighthouse. With a warm cache, DOMContentLoaded was 245ms. With the cache disabled, it was 735ms. Lighthouse estimated about 300ms of savings from deferring render-blocking files, including the Vimeo player and first-party CSS and jQuery. SEOptimer showed SSL enabled, HTTP redirected to HTTPS, and an A+ for on-page SEO."
+                    },
+                    {
+                        "action_title": "Recommendations and the presentation",
+                        "action_description": "I wrote the audit and built a 12-slide presentation for Danceworks. The recommendations were 301 redirects for the 77 inbound broken links, the 24 keywords added to the page content, repairs for the 404s and other 4XX responses, deferred or removed render-blocking scripts, richer schema, underlines on links that were identified by color alone, and removal of unused CSS and JavaScript. I did not change the live site."
                     }
                 ],
-                "result": "Lorem ipsum",
-                "summary": "Lorem ipsum"
+                "result": "Danceworks received a record of what to keep and what to fix. Keep the sitemaps, the SSL setup, and the mobile accessibility. Fix the 77 inbound broken links, put the 24 keywords on the pages, repair the 6 internal 404s, and reduce render-blocking files so Core Web Vitals can pass.",
+                "summary": "Audited danceworksmke.org for Danceworks, Inc. The site had valid sitemaps, SSL, and strong mobile accessibility. I recommended 301 redirects for 77 broken inbound links, on-page use of 24 missing keywords, and fixes for failing Core Web Vitals."
+            },
+            "story": {
+                "eyebrow": "Technical SEO",
+                "tldr": [
+                    "I audited danceworksmke.org for Danceworks, Inc. and prepared the findings presentation in February 2026.",
+                    "The site already had valid sitemaps, SSL, and strong mobile accessibility. The first fixes I recommended were 77 broken links from other sites, 24 keywords missing from the pages, and Core Web Vitals scores that failed on desktop and mobile."
+                ],
+                "facts": [
+                    {
+                        "label": "My role",
+                        "value": "Technical SEO auditor and presenter."
+                    },
+                    {
+                        "label": "Timeline",
+                        "value": "February 2026"
+                    },
+                    {
+                        "label": "Team",
+                        "value": "Solo"
+                    },
+                    {
+                        "label": "Tools",
+                        "value": "Screaming Frog, PageSpeed Insights, Lighthouse, Ahrefs, SEOptimer, and the Schema.org validator"
+                    }
+                ],
+                "sections": [
+                    {
+                        "id": "background",
+                        "label": "Background",
+                        "title": "A site for classes, performances, and support",
+                        "quote": "Founded in 1992, the mission of Danceworks, Inc., a 501(c)(3) nonprofit, is to enhance joy, health and creativity by engaging the community through dance.",
+                        "paragraphs": [
+                            "Danceworks describes its vision as a source for arts education and community collaborations, and its purpose as inspiring lifelong interest and participation in the arts.",
+                            "This was my UXD3050 technical SEO audit. I used crawl, index, link, metadata, speed, mobile, and security checks, then prepared a presentation of the recommendations for Danceworks. I did not change the live site."
+                        ]
+                    },
+                    {
+                        "id": "problem",
+                        "label": "Problem",
+                        "title": "The site has to be found, and it has to load",
+                        "paragraphs": [
+                            "Classes, performances, and donations depend on people reaching the right page from search and from links on other sites. A slow page, a missing description, or a broken inbound link can stop that person from getting there.",
+                            "Desktop performance scored 58. Mobile performance scored 44. Both failed the Core Web Vitals assessment. Desktop largest contentful paint was 2.7 seconds. Mobile largest contentful paint was 3 seconds."
+                        ]
+                    },
+                    {
+                        "id": "process",
+                        "label": "Process",
+                        "title": "What I checked",
+                        "subsections": [
+                            {
+                                "title": "Crawl and index",
+                                "body": "robots.txt was present. It disallows /wp-admin/ and allows /wp-admin/admin-ajax.php, which matches a WordPress site. Schema.org reported no errors and detected two items. I recommended Organization, Event, and LocalBusiness schema, with clearer name, description, and about text, then another pass through the validator. Two XML sitemaps were valid. One contained the homepage at the highest priority. The other listed 32 URLs and was updated regularly. Screaming Frog found no orphan pages."
+                            },
+                            {
+                                "title": "Links, metadata, and keywords",
+                                "body": "Ahrefs found 0 broken links on danceworksmke.org and 77 broken links from other sites. The fix I recommended was a 301 redirect for each broken inbound URL, through a WordPress redirect plugin or the server, followed by a recrawl in Ahrefs or Screaming Frog. Screaming Frog also found 6 internal 404s and 25 responses in the 4XX range. Two meta descriptions were missing. Titles and meta descriptions were not duplicated. Twenty-four keywords were configured, and none of them appeared in the page content. I recommended adding those terms to the pages and crawling again."
+                            },
+                            {
+                                "title": "Speed, mobile use, and security",
+                                "body": "Cumulative layout shift was 0. Mobile accessibility scored between 91 and 100 in PageSpeed Insights and Lighthouse. On my phone, the type was readable and the navigation was clear. Lighthouse still flagged links that were identified by color alone, so I recommended underlines. A few sponsor logo links had no accessible name. I treated those as logos and would not count them against the score. With a warm cache, DOMContentLoaded was 245ms. With the cache disabled, it was 735ms. Lighthouse estimated about 300ms of savings from deferring render-blocking files, including the Vimeo player and first-party CSS and jQuery. SEOptimer showed SSL enabled, HTTP redirected to HTTPS, and an A+ for on-page SEO. Screaming Frog reported heading tags in about 24 places. In the page source, the hierarchy was mostly divs. The code change I recommended was removing unused CSS and JavaScript."
+                            }
+                        ]
+                    },
+                    {
+                        "id": "final-product",
+                        "label": "Final product",
+                        "title": "The audit and a 12-slide presentation",
+                        "images": [
+                            {
+                                "src": "/images/danceworks-2.jpg",
+                                "alt": "Closing slide. Strengths listed are sitemaps, SSL certification, and accessibility. Items that need improvement are 4XX errors, Core Web Vitals performance, code efficiency, keywords, and broken links."
+                            }
+                        ],
+                        "paragraphs": [
+                            "The presentation lists sitemaps, SSL certification, and accessibility as strengths. It lists 4XX errors, Core Web Vitals performance, code efficiency, keywords, and broken links as the items to improve.",
+                            "Each recommendation included a check. Recrawl after the redirects and the keyword updates. Rerun PageSpeed Insights after the render-blocking files are deferred or removed."
+                        ]
+                    },
+                    {
+                        "id": "impact",
+                        "label": "Impact",
+                        "title": "What to fix first",
+                        "paragraphs": [
+                            "The audit did not change the live site. It gave Danceworks a specific order of work: 301 redirects for the 77 inbound broken links, the 24 keywords placed in the page content, repairs for the 6 internal 404s and the other 4XX responses, and less render-blocking CSS and JavaScript so the Core Web Vitals scores can pass."
+                        ],
+                        "stats": [
+                            {
+                                "value": "77",
+                                "label": "broken links from other sites. Ahrefs found 0 broken links on the site itself."
+                            },
+                            {
+                                "value": "44",
+                                "label": "mobile PageSpeed performance score. Desktop scored 58. Both failed Core Web Vitals."
+                            },
+                            {
+                                "value": "24",
+                                "label": "configured keywords that did not appear in the page content."
+                            }
+                        ]
+                    }
+                ]
             }
         },
         {
