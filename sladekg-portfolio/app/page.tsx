@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState, type FormEvent } from "react";
+import { useEffect, useRef, useState, type FormEvent } from "react";
 import CaseStudyCard from "./components/case-study-card";
 import type { Project } from "./lib/portfolio";
 
@@ -14,22 +14,23 @@ const categories = [
 ] as const;
 
 type CategoryId = (typeof categories)[number]["id"];
+type ProjectFilter = CategoryId | "all";
 
 type PortfolioContent = {
   projects: Project[];
 };
 
 export default function Home() {
-  const [activeCategory, setActiveCategory] =
-    useState<CategoryId>("product_design");
+  const [filter, setFilter] = useState<ProjectFilter>("all");
   const [projects, setProjects] = useState<Project[]>([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
   const [retryCount, setRetryCount] = useState(0);
-  const [isHeroScrolled, setIsHeroScrolled] = useState(false);
-  const filteredProjects = projects.filter((project) =>
-    project.topics.includes(activeCategory),
-  );
+  const heroRef = useRef<HTMLElement>(null);
+  const filteredProjects =
+    filter === "all"
+      ? projects
+      : projects.filter((project) => project.topics.includes(filter));
 
   useEffect(() => {
     const controller = new AbortController();
@@ -73,17 +74,35 @@ export default function Home() {
   }, [retryCount]);
 
   useEffect(() => {
-    const updateHeroState = () => {
-      setIsHeroScrolled(window.scrollY > 80);
+    const hero = heroRef.current;
+    if (!hero) return;
+
+    const nav = document.querySelector(".folder-nav");
+    let frame = 0;
+
+    const apply = () => {
+      frame = 0;
+      const stackAt =
+        nav instanceof HTMLElement ? Math.max(nav.offsetTop, 1) : 1;
+      const progress = Math.min(1, Math.max(0, window.scrollY / stackAt));
+      const channel = (from: number, to: number) =>
+        Math.round(from + (to - from) * progress);
+      hero.style.backgroundColor = `rgb(${channel(254, 251)} ${channel(254, 248)} ${channel(254, 240)})`;
     };
 
-    updateHeroState();
-    window.addEventListener("scroll", updateHeroState, { passive: true });
-    window.addEventListener("resize", updateHeroState);
+    const onScroll = () => {
+      if (frame) return;
+      frame = window.requestAnimationFrame(apply);
+    };
+
+    apply();
+    window.addEventListener("scroll", onScroll, { passive: true });
+    window.addEventListener("resize", onScroll);
 
     return () => {
-      window.removeEventListener("scroll", updateHeroState);
-      window.removeEventListener("resize", updateHeroState);
+      window.removeEventListener("scroll", onScroll);
+      window.removeEventListener("resize", onScroll);
+      if (frame) window.cancelAnimationFrame(frame);
     };
   }, []);
 
@@ -113,8 +132,8 @@ export default function Home() {
         <span className="hero-location">Working everywhere</span>
       </div>
 
-      <div className={`landing-shell${isHeroScrolled ? " is-scrolled" : ""}`}>
-        <section className="hero" id="top" aria-labelledby="hero-title">
+      <div className="landing-shell">
+        <section className="hero" id="top" aria-labelledby="hero-title" ref={heroRef}>
           <div className="hero-intro">
             <h1 id="hero-title" className="hero-name">
               Gabrielle Sladek
@@ -187,22 +206,29 @@ export default function Home() {
         </div>
 
         <div className="project-index">
-          <div className="active-folder" key={activeCategory} aria-live="polite">
-            <div className="folder-tabs" role="group" aria-label="Filter projects by discipline">
+          <div key={filter} aria-live="polite">
+            <div className="project-filters" role="group" aria-label="Filter projects by discipline">
+              <button
+                className={`project-filter${filter === "all" ? " is-active" : ""}`}
+                type="button"
+                aria-pressed={filter === "all"}
+                onClick={() => setFilter("all")}
+              >
+                All
+              </button>
               {categories.map((category) => (
                 <button
-                  className={`folder-tab${activeCategory === category.id ? " is-active" : ""}`}
+                  className={`project-filter${filter === category.id ? " is-active" : ""}`}
                   key={category.id}
                   type="button"
-                  aria-pressed={activeCategory === category.id}
-                  onClick={() => setActiveCategory(category.id)}
+                  aria-pressed={filter === category.id}
+                  onClick={() => setFilter(category.id)}
                 >
-                  <span className="folder-number">{category.number}</span>
-                  <span>{category.label}</span>
+                  {category.label}
                 </button>
               ))}
             </div>
-            <div className="active-folder-content">
+            <div className="project-filter-results">
               {loading ? (
                 <p className="status-message">Gathering the good stuff…</p>
               ) : error ? (
@@ -222,12 +248,8 @@ export default function Home() {
                 </p>
               ) : (
                 <div className="case-study-grid">
-                  {filteredProjects.map((project, index) => (
-                    <CaseStudyCard
-                      key={project.title}
-                      project={project}
-                      index={index}
-                    />
+                  {filteredProjects.map((project) => (
+                    <CaseStudyCard key={project.title} project={project} />
                   ))}
                 </div>
               )}
