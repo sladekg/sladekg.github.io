@@ -327,36 +327,253 @@
         {
             "title": "Snap Inc.",
             "topics": [
-                "product_strategy",
-                "user_research"
+                "product_strategy"
             ],
             "images": [
                 {
-                    "src": "/images/snap-1.png",
-                    "alt": "Snap Inc."
+                    "src": "/images/snap/01-title.jpg",
+                    "alt": "Title slide on a yellow background. It reads UX Strategy Final Project and Snap Glasses Product Strategy. The header prints Alana Perry, Gabby Sladek, and Parker Cobb together, with UXD 4030. A photo shows black Spectacles and three people wearing them."
                 },
                 {
-                    "src": "/images/snap-2.png",
-                    "alt": "Snap Inc."
+                    "src": "/images/snap/02-background.jpg",
+                    "alt": "Background on Specs. The bullets say the glasses are augmented reality, available through the developer program, paid for with a subscription, and aimed at broad, undefined use cases. The slide quotes BUILD THE FUTURE, TODAY and links to spectacles.com."
+                },
+                {
+                    "src": "/images/snap/03-strategic-question.jpg",
+                    "alt": "Strategic question slide. It asks what job, use case, or value proposition Snap should prioritize, and says a defined use case would help Snap target one market and make the product's value clearer."
+                },
+                {
+                    "src": "/images/snap/04-frameworks.jpg",
+                    "alt": "Frameworks slide. It lists jobs to be done, a business model canvas, lightweight competitor analysis, and scenario planning, each with a one-line purpose."
+                },
+                {
+                    "src": "/images/snap/05-jobs-to-be-done.jpg",
+                    "alt": "Jobs to be done slide. The job is augmenting daily tasks by adding a digital element. It says users want more chances to use the product and fewer barriers, and that Snap has to name clear use cases and remove boundaries to use."
+                },
+                {
+                    "src": "/images/snap/06-business-model-canvas.jpg",
+                    "alt": "Business model canvas slide. It says Specs is focused on partnerships that expand the software, and on Gen Z and Millennials."
+                },
+                {
+                    "src": "/images/snap/07-competitor-analysis.jpg",
+                    "alt": "Competitor analysis slide. It compares XREAL 1 Pro, HoloLens, Meta glasses, and Rokid Max. The takeaways say Meta dominates the social media sphere, and that tech limitations are the main point of user frustration."
+                },
+                {
+                    "src": "/images/snap/08-scenario-planning.jpg",
+                    "alt": "Scenario planning matrix. The axes are user expectations and tech capabilities. The quadrants are Discouraged and Disheartened, The Norm, MVP Haven, and Unseen Potential. The takeaway says Specs lacks the capabilities for daily workforce use."
+                },
+                {
+                    "src": "/images/snap/09-scenario-placement.jpg",
+                    "alt": "Scenario matrix with products placed. HoloLens and Xreal 1 Pro are in Discouraged and Disheartened. Meta Glasses and Rokid Max are in The Norm. Snap Specs is in MVP Haven. Unseen Potential is empty."
+                },
+                {
+                    "src": "/images/snap/10-potential-markets.jpg",
+                    "alt": "Potential markets slide. Personal is marked oversaturated and Meta dominated. Corporate is marked unrealistic. Educational says AR hurts learning over the long term. Manufacturing is highlighted as the recommendation."
+                },
+                {
+                    "src": "/images/snap/11-manufacturing-use-cases.jpg",
+                    "alt": "Manufacturing use cases slide. The bullets are overlaid assembly instructions, CAD designers sharing how pieces fit into a larger machine, and viewing 3D models at scale to take measurements by hand."
+                },
+                {
+                    "src": "/images/snap/12-why-manufacturing.jpg",
+                    "alt": "Why manufacturing works. The slide lists an underserved market used by competitors, short use cases, alignment with partnerships Snap is forming, and no need for a mass purchase."
+                },
+                {
+                    "src": "/images/snap/13-counterarguments.jpg",
+                    "alt": "Counterarguments slide. Manufacturing does not align with Snap's other products, does not match the software being designed, and past manufacturing efforts by other companies have failed."
+                },
+                {
+                    "src": "/images/snap/14-implications.jpg",
+                    "alt": "Implications slide. The bullets are audience shifts, meeting industry demands, new partnerships, steering the industry, and a larger monetary gain."
+                },
+                {
+                    "src": "/images/snap/15-evaluation.jpg",
+                    "alt": "Evaluation slide. It lists total sales, purchase after trials, reviews, return rates, subscribers, and partnerships. It does not give numbers."
+                },
+                {
+                    "src": "/images/snap/16-thank-you.jpg",
+                    "alt": "Closing slide on a yellow background. It reads Thank you and Questions. The header prints Alana Perry, Gabby Sladek, and Parker Cobb together, with UXD 4030."
                 }
             ],
-            "presentation": "/pdfs/snap-inc.pdf",
+            "presentation": "",
             "awards": 0,
             "impact": {
-                "value": "0",
-                "description": "Results coming soon"
+                "value": null,
+                "description": "The presentation recommends a market for Specs. It lists future measures and does not report a result."
             },
             "case_study": {
-                "context": "Lorem ipsum",
-                "my_role": "Lorem ipsum",
+                "context": "Specs are augmented reality glasses. The background slide says they were available only through the developer program, that payment was a subscription, and that the use cases were broad and undefined. We asked what job, use case, or value proposition Snap should prioritize. The slide says a defined use case would help Snap target one market and make the product's value clearer.",
+                "my_role": "UX strategist, with Alana Perry and Parker Cobb. We worked together in person.",
                 "action": [
                     {
-                        "action_title": "Project work",
-                        "action_description": "Lorem ipsum"
+                        "action_title": "Jobs to be done",
+                        "action_description": "I mapped the job as augmenting daily tasks by adding a digital element, and I wrote the outcome statements for that map. The deck marks four outcomes as high importance and low satisfaction. We concluded that Snap has to name clear use cases and remove boundaries to use."
+                    },
+                    {
+                        "action_title": "Business model canvas",
+                        "action_description": "I made the business model canvas for Specs. The finding we kept is that Specs is focused on partnerships that expand the software, and on Gen Z and Millennials, the audience Snap is already popular with."
+                    },
+                    {
+                        "action_title": "Competitor analysis",
+                        "action_description": "I did some of the competitor analysis. We compared XREAL 1 Pro, Meta glasses, HoloLens, and Rokid Max. The final slide says Meta dominates the social media sphere, and that tech limitations are the main point of user frustration."
+                    },
+                    {
+                        "action_title": "Scenario planning",
+                        "action_description": "I did the scenario planning. We plotted tech capabilities against user expectations and placed Specs in MVP Haven, the quadrant for low tech capabilities and low user expectations. The slide says Specs lacks the capabilities for daily workforce use."
+                    },
+                    {
+                        "action_title": "Strategic planning",
+                        "action_description": "I did the strategic planning with Alana Perry and Parker Cobb. We set personal use aside because that market is oversaturated and dominated by Meta. We set a general corporate rollout aside because a pair for every employee was unrealistic. We set education aside because the slide says AR hurts learning over the long term. We recommended manufacturing, with short tasks such as assembly instructions, CAD review, and full-scale measurement."
                     }
                 ],
-                "result": "Lorem ipsum",
-                "summary": "Lorem ipsum"
+                "result": "We recommended manufacturing. The use cases are overlaid assembly instructions, CAD designers viewing how a piece fits into a larger machine, and measuring a 3D model at full scale by hand. The slides say the tasks are short, manufacturing has been used by competitors, and it fits partnerships Snap is forming. The counterarguments are that manufacturing does not align with Snap's other products, does not match the software being designed, and that other companies have failed at it. The evaluation slide names sales, trials, reviews, returns, subscribers, and partnerships. It gives no numbers.",
+                "summary": "Our team recommended that Snap prioritize manufacturing as the use case for Specs, the company's augmented reality glasses. The slides say Specs were available through the developer program and paid for with a subscription, and that the use cases were broad and undefined."
+            },
+            "story": {
+                "eyebrow": "Product strategy",
+                "tldr": [
+                    "Our team recommended that Snap prioritize manufacturing as the use case for Specs, the company's augmented reality glasses. The slides say Specs were available through the developer program and paid for with a subscription, and that the use cases were broad and undefined.",
+                    "The presentation recommends a market for Specs. It lists future measures and does not report a result."
+                ],
+                "facts": [
+                    {
+                        "label": "My role",
+                        "value": "UX strategist, with Alana Perry and Parker Cobb. We worked together in person."
+                    }
+                ],
+                "sections": [
+                    {
+                        "id": "background",
+                        "label": "Background",
+                        "title": "Specs in the developer program",
+                        "images": [
+                            {
+                                "src": "/images/snap/02-background.jpg",
+                                "alt": "Background on Specs. The bullets say the glasses are augmented reality, available through the developer program, paid for with a subscription, and aimed at broad, undefined use cases. The slide quotes BUILD THE FUTURE, TODAY and links to spectacles.com."
+                            }
+                        ],
+                        "paragraphs": [
+                            "Specs are augmented reality glasses. The background slide says they were available only through the developer program, that payment was a subscription, and that the use cases were broad and undefined."
+                        ]
+                    },
+                    {
+                        "id": "problem",
+                        "label": "Problem",
+                        "title": "Which use case should Snap prioritize?",
+                        "images": [
+                            {
+                                "src": "/images/snap/03-strategic-question.jpg",
+                                "alt": "Strategic question slide. It asks what job, use case, or value proposition Snap should prioritize, and says a defined use case would help Snap target one market and make the product's value clearer."
+                            }
+                        ],
+                        "paragraphs": [
+                            "We asked what job, use case, or value proposition Snap should prioritize. The slide says a defined use case would help Snap target one market and make the product's value clearer."
+                        ]
+                    },
+                    {
+                        "id": "process",
+                        "label": "Process",
+                        "title": "From the job map to a recommendation",
+                        "images": [
+                            {
+                                "src": "/images/snap/04-frameworks.jpg",
+                                "alt": "Frameworks slide. It lists jobs to be done, a business model canvas, lightweight competitor analysis, and scenario planning, each with a one-line purpose."
+                            },
+                            {
+                                "src": "/images/snap/05-jobs-to-be-done.jpg",
+                                "alt": "Jobs to be done slide. The job is augmenting daily tasks by adding a digital element. It says users want more chances to use the product and fewer barriers, and that Snap has to name clear use cases and remove boundaries to use."
+                            },
+                            {
+                                "src": "/images/snap/06-business-model-canvas.jpg",
+                                "alt": "Business model canvas slide. It says Specs is focused on partnerships that expand the software, and on Gen Z and Millennials."
+                            },
+                            {
+                                "src": "/images/snap/07-competitor-analysis.jpg",
+                                "alt": "Competitor analysis slide. It compares XREAL 1 Pro, HoloLens, Meta glasses, and Rokid Max. The takeaways say Meta dominates the social media sphere, and that tech limitations are the main point of user frustration."
+                            },
+                            {
+                                "src": "/images/snap/08-scenario-planning.jpg",
+                                "alt": "Scenario planning matrix. The axes are user expectations and tech capabilities. The quadrants are Discouraged and Disheartened, The Norm, MVP Haven, and Unseen Potential. The takeaway says Specs lacks the capabilities for daily workforce use."
+                            },
+                            {
+                                "src": "/images/snap/09-scenario-placement.jpg",
+                                "alt": "Scenario matrix with products placed. HoloLens and Xreal 1 Pro are in Discouraged and Disheartened. Meta Glasses and Rokid Max are in The Norm. Snap Specs is in MVP Haven. Unseen Potential is empty."
+                            }
+                        ],
+                        "subsections": [
+                            {
+                                "title": "Jobs to be done",
+                                "body": "I mapped the job as augmenting daily tasks by adding a digital element, and I wrote the outcome statements for that map. The deck marks four outcomes as high importance and low satisfaction. We concluded that Snap has to name clear use cases and remove boundaries to use."
+                            },
+                            {
+                                "title": "Business model canvas",
+                                "body": "I made the business model canvas for Specs. The finding we kept is that Specs is focused on partnerships that expand the software, and on Gen Z and Millennials, the audience Snap is already popular with."
+                            },
+                            {
+                                "title": "Competitor analysis",
+                                "body": "I did some of the competitor analysis. We compared XREAL 1 Pro, Meta glasses, HoloLens, and Rokid Max. The final slide says Meta dominates the social media sphere, and that tech limitations are the main point of user frustration."
+                            },
+                            {
+                                "title": "Scenario planning",
+                                "body": "I did the scenario planning. We plotted tech capabilities against user expectations and placed Specs in MVP Haven, the quadrant for low tech capabilities and low user expectations. The slide says Specs lacks the capabilities for daily workforce use."
+                            },
+                            {
+                                "title": "Strategic planning",
+                                "body": "I did the strategic planning with Alana Perry and Parker Cobb. We set personal use aside because that market is oversaturated and dominated by Meta. We set a general corporate rollout aside because a pair for every employee was unrealistic. We set education aside because the slide says AR hurts learning over the long term. We recommended manufacturing, with short tasks such as assembly instructions, CAD review, and full-scale measurement."
+                            }
+                        ]
+                    },
+                    {
+                        "id": "final-product",
+                        "label": "Recommendation",
+                        "title": "Manufacturing",
+                        "images": [
+                            {
+                                "src": "/images/snap/10-potential-markets.jpg",
+                                "alt": "Potential markets slide. Personal is marked oversaturated and Meta dominated. Corporate is marked unrealistic. Educational says AR hurts learning over the long term. Manufacturing is highlighted as the recommendation."
+                            },
+                            {
+                                "src": "/images/snap/11-manufacturing-use-cases.jpg",
+                                "alt": "Manufacturing use cases slide. The bullets are overlaid assembly instructions, CAD designers sharing how pieces fit into a larger machine, and viewing 3D models at scale to take measurements by hand."
+                            },
+                            {
+                                "src": "/images/snap/12-why-manufacturing.jpg",
+                                "alt": "Why manufacturing works. The slide lists an underserved market used by competitors, short use cases, alignment with partnerships Snap is forming, and no need for a mass purchase."
+                            },
+                            {
+                                "src": "/images/snap/13-counterarguments.jpg",
+                                "alt": "Counterarguments slide. Manufacturing does not align with Snap's other products, does not match the software being designed, and past manufacturing efforts by other companies have failed."
+                            },
+                            {
+                                "src": "/images/snap/14-implications.jpg",
+                                "alt": "Implications slide. The bullets are audience shifts, meeting industry demands, new partnerships, steering the industry, and a larger monetary gain."
+                            }
+                        ],
+                        "paragraphs": [
+                            "We recommended manufacturing. The use cases are overlaid assembly instructions, CAD designers viewing how a piece fits into a larger machine, and measuring a 3D model at full scale by hand.",
+                            "The slides say the tasks are short, manufacturing has been used by competitors, and it fits partnerships Snap is forming. The counterarguments are that manufacturing does not align with Snap's other products, does not match the software being designed, and that other companies have failed at it."
+                        ]
+                    },
+                    {
+                        "id": "impact",
+                        "label": "Outcome",
+                        "title": "No measured result",
+                        "images": [
+                            {
+                                "src": "/images/snap/15-evaluation.jpg",
+                                "alt": "Evaluation slide. It lists total sales, purchase after trials, reviews, return rates, subscribers, and partnerships. It does not give numbers."
+                            },
+                            {
+                                "src": "/images/snap/16-thank-you.jpg",
+                                "alt": "Closing slide on a yellow background. It reads Thank you and Questions. The header prints Alana Perry, Gabby Sladek, and Parker Cobb together, with UXD 4030."
+                            }
+                        ],
+                        "paragraphs": [
+                            "The evaluation slide names sales, trials, reviews, returns, subscribers, and partnerships. It gives no numbers.",
+                            "The presentation recommends a market for Specs. It lists future measures and does not report a result."
+                        ]
+                    }
+                ]
             }
         },
         {

@@ -2,7 +2,14 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { useEffect, useRef, useState } from "react";
+import {
+  useEffect,
+  useRef,
+  useState,
+  type FocusEvent,
+  type KeyboardEvent,
+  type RefObject,
+} from "react";
 import {
   formatTopic,
   type Project,
@@ -13,6 +20,204 @@ import {
 type StoryLayoutProps = {
   project: Project & { story: ProjectStory };
 };
+
+function StoryLightbox({
+  dialogRef,
+  image,
+  onClose,
+}: {
+  dialogRef: RefObject<HTMLDialogElement | null>;
+  image: StoryImage | null;
+  onClose: () => void;
+}) {
+  return (
+    <dialog
+      ref={dialogRef}
+      className="story-lightbox"
+      onClose={onClose}
+      onClick={(event) => {
+        if (event.target === dialogRef.current) onClose();
+      }}
+    >
+      {image && (
+        <>
+          <button
+            type="button"
+            className="story-lightbox-close"
+            aria-label="Close"
+            onClick={onClose}
+          >
+            <svg className="story-icon" viewBox="0 0 16 16" aria-hidden="true">
+              <path d="M4 4 12 12" />
+              <path d="M12 4 4 12" />
+            </svg>
+          </button>
+          {/* The enlarged view uses the original file so it is not cropped by the thumbnail size. */}
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img src={image.src} alt={image.alt} />
+        </>
+      )}
+    </dialog>
+  );
+}
+
+function StoryFigure({
+  image,
+  sizes,
+  onEnlarge,
+}: {
+  image: StoryImage;
+  sizes: string;
+  onEnlarge: (image: StoryImage) => void;
+}) {
+  return (
+    <figure className="story-figure">
+      <Image
+        src={image.src}
+        alt={image.alt}
+        width={720}
+        height={480}
+        sizes={sizes}
+      />
+      <button
+        type="button"
+        className="story-enlarge"
+        aria-label="Enlarge"
+        onClick={() => onEnlarge(image)}
+      >
+        <svg className="story-icon" viewBox="0 0 16 16" aria-hidden="true">
+          <circle cx="7" cy="7" r="4.25" />
+          <path d="M7 5.15v3.7" />
+          <path d="M5.15 7h3.7" />
+          <path d="M10.2 10.2 13.25 13.25" />
+        </svg>
+      </button>
+    </figure>
+  );
+}
+
+const carouselDelayMs = 8000;
+
+function StoryCarousel({ images }: { images: StoryImage[] }) {
+  const dialogRef = useRef<HTMLDialogElement>(null);
+  const [open, setOpen] = useState<StoryImage | null>(null);
+  const [index, setIndex] = useState(0);
+  const [pointerOver, setPointerOver] = useState(false);
+  const [controlFocused, setControlFocused] = useState(false);
+  const count = images.length;
+  const image = images[index] ?? images[0];
+  const autoplayPaused = pointerOver || controlFocused || open !== null;
+
+  function show(nextIndex: number) {
+    setIndex((nextIndex + count) % count);
+  }
+
+  useEffect(() => {
+    if (autoplayPaused || count < 2) return;
+    const timer = window.setTimeout(() => {
+      setIndex((current) => (current + 1) % count);
+    }, carouselDelayMs);
+    return () => window.clearTimeout(timer);
+  }, [autoplayPaused, count, index]);
+
+  function enlarge(nextImage: StoryImage) {
+    const dialog = dialogRef.current;
+    if (!dialog || dialog.open) return;
+    setOpen(nextImage);
+    dialog.showModal();
+  }
+
+  function close() {
+    dialogRef.current?.close();
+    setOpen(null);
+  }
+
+  function onKeyDown(event: KeyboardEvent<HTMLDivElement>) {
+    if (dialogRef.current?.open) return;
+    if (event.key === "ArrowRight") {
+      event.preventDefault();
+      show(index + 1);
+    } else if (event.key === "ArrowLeft") {
+      event.preventDefault();
+      show(index - 1);
+    }
+  }
+
+  function onBlur(event: FocusEvent<HTMLDivElement>) {
+    const nextTarget = event.relatedTarget;
+    if (nextTarget instanceof Node && event.currentTarget.contains(nextTarget)) {
+      return;
+    }
+    setControlFocused(false);
+  }
+
+  if (!image) return null;
+
+  return (
+    <div
+      className="story-carousel"
+      role="region"
+      aria-roledescription="carousel"
+      aria-label="Images"
+      data-autoplay={carouselDelayMs}
+      data-autoplay-state={autoplayPaused ? "paused" : "playing"}
+      tabIndex={0}
+      onKeyDown={onKeyDown}
+      onPointerEnter={() => setPointerOver(true)}
+      onPointerLeave={() => setPointerOver(false)}
+      onFocus={() => setControlFocused(true)}
+      onBlur={onBlur}
+    >
+      <div className="story-carousel-stage">
+        <button
+          type="button"
+          className="story-carousel-button is-previous"
+          aria-label="Previous"
+          onClick={() => show(index - 1)}
+        >
+          <svg className="story-carousel-arrow" viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M14.5 5 7.5 12l7 7" />
+          </svg>
+        </button>
+        <StoryFigure
+          image={image}
+          sizes="(max-width: 760px) 88vw, 720px"
+          onEnlarge={enlarge}
+        />
+        <button
+          type="button"
+          className="story-carousel-button is-next"
+          aria-label="Next"
+          onClick={() => show(index + 1)}
+        >
+          <svg className="story-carousel-arrow" viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M9.5 5 16.5 12l-7 7" />
+          </svg>
+        </button>
+      </div>
+      <p className="story-carousel-status" aria-live="polite">
+        {index + 1} of {count}
+      </p>
+      <div className="story-carousel-dots">
+        {images.map((dotImage, dotIndex) => (
+          <button
+            key={dotImage.src}
+            type="button"
+            className={
+              dotIndex === index
+                ? "story-carousel-dot is-active"
+                : "story-carousel-dot"
+            }
+            aria-label={`Show image ${dotIndex + 1} of ${count}`}
+            aria-current={dotIndex === index ? "true" : undefined}
+            onClick={() => setIndex(dotIndex)}
+          />
+        ))}
+      </div>
+      <StoryLightbox dialogRef={dialogRef} image={open} onClose={close} />
+    </div>
+  );
+}
 
 function StoryGallery({ images }: { images: StoryImage[] }) {
   const dialogRef = useRef<HTMLDialogElement>(null);
@@ -30,59 +235,23 @@ function StoryGallery({ images }: { images: StoryImage[] }) {
     setOpen(null);
   }
 
+  if (images.length >= 3) {
+    return <StoryCarousel images={images} />;
+  }
+
   return (
     <>
       <div className="story-gallery">
         {images.map((image) => (
-          <figure key={image.src} className="story-figure">
-            <Image
-              src={image.src}
-              alt={image.alt}
-              width={720}
-              height={480}
-              sizes="(max-width: 760px) 340px, 460px"
-            />
-            <button
-              type="button"
-              className="story-enlarge"
-              aria-label="Enlarge"
-              onClick={() => enlarge(image)}
-            >
-              <svg className="story-icon" viewBox="0 0 16 16" aria-hidden="true">
-                <circle cx="7" cy="7" r="4.25" />
-                <path d="M10.2 10.2 13.25 13.25" />
-              </svg>
-            </button>
-          </figure>
+          <StoryFigure
+            key={image.src}
+            image={image}
+            sizes="(max-width: 760px) 340px, 460px"
+            onEnlarge={enlarge}
+          />
         ))}
       </div>
-      <dialog
-        ref={dialogRef}
-        className="story-lightbox"
-        onClose={() => setOpen(null)}
-        onClick={(event) => {
-          if (event.target === dialogRef.current) close();
-        }}
-      >
-        {open && (
-          <>
-            <button
-              type="button"
-              className="story-lightbox-close"
-              aria-label="Close"
-              onClick={close}
-            >
-              <svg className="story-icon" viewBox="0 0 16 16" aria-hidden="true">
-                <path d="M4 4 12 12" />
-                <path d="M12 4 4 12" />
-              </svg>
-            </button>
-            {/* The enlarged view uses the original file so it is not cropped by the thumbnail size. */}
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img src={open.src} alt={open.alt} />
-          </>
-        )}
-      </dialog>
+      <StoryLightbox dialogRef={dialogRef} image={open} onClose={close} />
     </>
   );
 }
